@@ -310,9 +310,7 @@
             <img id="Scene-1" src="./Style/Images/Scene-1.jpg">
             <img id="Scene-2" src="./Style/Images/Scene-2.jpg">
             <img id="Scene-3" src="./Style/Images/Scene-3.jpg">
-
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
-
             <img id="Scene-4" src="./Style/Images/Scene-4.jpg">
             <img id="Scene-5" src="./Style/Images/Scene-5.jpg">
             <img id="Scene-6" src="./Style/Images/Scene-6.jpg">
@@ -354,10 +352,12 @@
         </a-assets>
 
         <a-entity laser-controls="hand: left"
-            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
+            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5">
+        </a-entity>
 
         <a-entity laser-controls="hand: right"
-            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
+            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5">
+        </a-entity>
 
         <!--! ##################################################### -->
         <a-entity id="the-plane-rotater" rotation="0 0 0">
@@ -543,7 +543,7 @@
         </a-entity>
         <!-- ################################################################# -->
         <!-- ##########################SCEAN################################## -->
-        <!-- 1################################################################# -->
+        <!-- 1################################################################ -->
         <a-entity scale="1 1 1 " class="big-pintings-containers" id="big-pintings-containers-1" visible="true">
             <a-plane data-clickable scale="150 140 0" opacity="0" class="pintings clickable"
                 rotation="-0.4509177847679579 91.46927424586515 1.0811713594118635"
@@ -953,8 +953,8 @@ PlaneRotation : 180
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
                 rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 284.61323" color="#000" the_pintings="Pinting_Name :DOUTS;
-Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
+                position="-328.89081 33.21107 284.61323" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
+Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size : 1.9/2.97; 
 Price : 6.799 000 francs (10460 € ) ;
@@ -1033,8 +1033,8 @@ PlaneRotation : 0
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
                 rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 121.35007" color="#000" the_pintings="Pinting_Name :DOUTS;
-Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
+                position="-328.89081 33.21107 121.35007" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
+Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size : 1.9/2.97; 
 Price : 6.799 000 francs (10460 € ) ;
@@ -1045,8 +1045,8 @@ PlaneRotation : 180
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
                 rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
-                position="302.67132 -0.11446 112.3861" color="#000" the_pintings="Pinting_Name :SOPHIE-TEXTE;
-Pinting_Picture: ./Style/Images/Tableaux/SOPHIE-TEXTE.jpg;
+                position="302.67132 -0.11446 112.3861" color="#000" the_pintings="Pinting_Name :SOPHIE;
+Pinting_Picture: ./Style/Images/Tableaux/SOPHIE.jpg;
 Autor_Name :Ina Makosi;
 Size : 1.9/2.97; 
 Price : 6.799 000 francs (10460 € ) ;
@@ -1056,8 +1056,8 @@ PlaneRotation : 180
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
                 rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 312.09882" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
-Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
+                position="-328.89081 33.21107 312.09882" color="#000" the_pintings="Pinting_Name :DOUTS;
+Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
 Autor_Name :Ina Makosi;
 Size : 1.9/2.97; 
 Price : 6.799 000 francs (10460 € ) ;
@@ -1119,11 +1119,10 @@ PlaneRotation : 180
 ">
             </a-plane>
 
-
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
                 rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-310.36524 35.03155 -55.31251" color="#000" the_pintings="Pinting_Name :DOUTS;
-Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
+                position="-310.36524 35.03155 -55.31251" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
+Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size : 1.9/2.97; 
 Price : 6.799 000 francs (10460 € ) ;
@@ -1131,11 +1130,10 @@ PlaneRotation : 180
 ">
             </a-plane>
 
-
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
                 rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-347.82934 33.21107 124.39075" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
-Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
+                position="-347.82934 33.21107 124.39075" color="#000" the_pintings="Pinting_Name :DOUTS;
+Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
 Autor_Name :Ina Makosi;
 Size : 1.9/2.97; 
 Price : 6.799 000 francs (10460 € ) ;
@@ -1183,7 +1181,7 @@ PlaneRotation : 180
         //! #######################################################
 
         let inVR = false;
-        // let inVR = true;
+
         AFRAME.registerComponent('the_scene', {
             tick: function () {
                 var sceneEl = this.el;
