@@ -389,22 +389,32 @@
         <!-- ################################################################## -->
         <!-- Group-1. -->
         <a-entity scale="1 1 1" class="groups" id="Group-1" visible="true">
-            <a-plane data-clickable class="pintings clickable" position="0.2165 -1 -5.52232"
-                rotation="-57.804566035158494 -14.279254170250375 -170.71793167938495"
+
+            <a-plane scale="10 10 10" data-clickable class="pintings clickable" position="1.03878 -31.37972 -58.09612"
+                rotation="-58.27095368039499 -2.2219303295173325 179.04186252704557"
                 material="src: #Arrow-1; transparent:true" the_dote="Name_of_dote: Dote-2 ; Group_to_activate: Group-2">
             </a-plane>
+
+
         </a-entity>
         <!-- Group-2. -->
         <a-entity scale=" 0 0 0" class="groups" id="Group-2" visible="false">
-            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true "
-                position="-0.41428 -1 5.03785" rotation="-76.8170245509846 141.15732015520038 158.92875208677313"
+            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true "
+                position="-2.86179 -26.16195 52.02709" rotation="-74.37449 148.97973 165.09882"
                 the_dote="Name_of_dote: Dote-1 ; Group_to_activate: Group-1">
             </a-plane>
 
-            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true" position="-0.2 -1 -6.95139"
-                rotation="-71.21464323019542 3.250962529572291 -179.5460653867607"
+
+
+            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="-1.21062 -33.06081 -78.21289" rotation="-69.49464 3.90096 -184.21607"
                 the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3">
             </a-plane>
+
+
+
+
+
 
         </a-entity>
         <!-- Group-3 -->
@@ -1044,25 +1054,25 @@ PlaneRotation : -280
 
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
-                position="302.67132 -0.11446 112.3861" color="#000" the_pintings="Pinting_Name :SOPHIE;
-Pinting_Picture: ./Style/Images/Tableaux/SOPHIE.jpg;
-Autor_Name :Ina Makosi;
-Size : 1.9/2.97; 
-Price : 6.799 000 francs (10460 € ) ;
-PlaneRotation : 280
-">
+                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+                position="-328.89081 33.21107 312.09882" color="#000" the_pintings="Pinting_Name :DOUTS;
+            Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
+            Autor_Name :Ina Makosi;
+            Size : 1.9/2.97; 
+            Price : 6.799 000 francs (10460 € ) ;
+            PlaneRotation : -280
+            ">
             </a-plane>
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 312.09882" color="#000" the_pintings="Pinting_Name :DOUTS;
-Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
-Autor_Name :Ina Makosi;
-Size : 1.9/2.97; 
-Price : 6.799 000 francs (10460 € ) ;
-PlaneRotation : -280
-">
+                rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
+                position="302.67132 -0.11446 112.3861" color="#000" the_pintings="Pinting_Name :SOPHIE-TEXTE;
+        Pinting_Picture: ./Style/Images/Tableaux/SOPHIE-TEXTE.jpg;
+        Autor_Name :Ina Makosi;
+        Size : 1.9/2.97; 
+        Price : 6.799 000 francs (10460 € ) ;
+        PlaneRotation : 280
+        ">
             </a-plane>
 
             <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
@@ -1204,8 +1214,10 @@ PlaneRotation : 280
 
                 this.el.setAttribute('color', '#fff')
                 this.el.setAttribute('opacity', '0.6')
-                this.el.setAttribute('event-set__mouseenter', "scale: 1.2 1.2 1")
-                this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9")
+                this.el.setAttribute('event-set__mouseenter', "scale: 11 11 11")
+                this.el.setAttribute('event-set__mouseleave', "scale: 10 10 10")
+                //this.el.setAttribute('event-set__mouseenter', "scale: 1.2 1.2 1")
+                // this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9")
                 this.el.style.cursor = 'pointer'
 
                 this.el.addEventListener('click', (theDote) => {
