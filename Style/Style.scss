@@ -429,6 +429,7 @@ html {
         border: #f1f1f1 .5em solid;
         width: 90%;
         height: auto;
+        max-height:90%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
@@ -463,6 +464,8 @@ html {
             #dimension_title{
                 grid-column: 1 / 5;
                 grid-row: 10;
+                font-size: 1em;
+                font-weight: 900;
 
             }
             #the_art_size{
