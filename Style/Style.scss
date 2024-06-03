@@ -429,7 +429,7 @@ html {
         border: #f1f1f1 .5em solid;
         width: 90%;
         height: auto;
-        max-height:80%;
+        max-height:85%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
@@ -438,7 +438,7 @@ html {
 
             #the_art_picture {
                 grid-column: 1 / 5;
-                grid-row: 2 / 8;
+                grid-row: 2 / 7;
             }
             #close_crad{
                 grid-column: 4 / 5;
@@ -467,12 +467,10 @@ html {
                 grid-row: 10;
                 font-size: 1em;
                 font-weight: 900;
-
             }
             #the_art_size{
                 grid-column: 1 / 5;
                 grid-row: 11;
-
             }
             #btn_container {
                 grid-column: 3 / 5;
