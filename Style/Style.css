@@ -355,7 +355,7 @@ html {
 .a-enter-vr .a-enter-vr-button {
   background: rgba(55, 55, 60, 0);
   border-radius: 0%;
-  background-image: url("./Style/Images/PNG/VR-icon.png");
+  background-image: url("./Images/PNG/VR-icon.png");
   background-size: 90%;
   background-position: center;
   transform: scale(1);
@@ -363,7 +363,7 @@ html {
 }
 
 .a-enter-vr .a-enter-vr-button:hover {
-  background-image: url("./Style/Images/PNG/VR-icon.png");
+  background-image: url("./Images/PNG/VR-icon.png");
   transform: scale(1.1);
 }
 
