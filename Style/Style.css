@@ -377,11 +377,12 @@ html {
     border: #f1f1f1 0.5em solid;
     width: 90%;
     height: auto;
-    max-height: 90%;
+    max-height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(auto);
+    margin: auto;
   }
   #the_crad_container #the_crad #the_art_picture {
     grid-column: 1/5;
