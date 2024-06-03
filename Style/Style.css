@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0em;
   padding: 0em;
@@ -191,5 +192,235 @@ html {
     bottom: -0.2em;
     right: none;
     left: 1em;
+  }
+}
+* {
+  margin: 0em;
+  padding: 0em;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.a-loader-title {
+  background-color: black;
+}
+
+#the_scene {
+  cursor: default;
+}
+
+.a-mouse-cursor-hover {
+  cursor: default !important;
+}
+
+.a-mouse-cursor-hover:active {
+  cursor: grab !important;
+}
+
+.pintings {
+  cursor: pointer !important;
+}
+
+.pintings:hover {
+  cursor: pointer !important;
+}
+
+#the_crad_container {
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+#the_crad_container #the_crad {
+  background: #f1f1f1;
+  width: 50em;
+  height: 30em;
+  border: 0.5em #f1f1f1 solid;
+  border-radius: 0.5em;
+  padding: 0.1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 2em;
+  grid-template-rows: repeat(1, 2em) 1fr repeat(10, 2em);
+}
+#the_crad_container #the_crad #the_art_picture {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 7;
+  grid-row: 2/12;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#the_crad_container #the_crad #art_title {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+  font-size: 1.4em;
+}
+#the_crad_container #the_crad #art_author {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 4;
+}
+#the_crad_container #the_crad #le_créer_par {
+  grid-column: 3/5;
+  grid-row: 3;
+}
+
+#the_crad_container #the_crad #the_art_picture img {
+  border-radius: 0.2em;
+}
+
+#dimension_title {
+  grid-column: 3/5;
+  grid-row: 6;
+}
+
+#the_crad_container #the_crad #the_art_size {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  grid-row: 7;
+  margin: auto 0.5 auto auto;
+}
+
+#the_crad_container #the_crad #the_art_price {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  grid-row: 9;
+  margin: auto;
+  display: none;
+}
+
+#btn_container {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  grid-column: 3/5;
+  grid-row: 10;
+  background-color: aqua;
+  border-radius: 0.12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#the_crad_container #the_crad #close_crad {
+  grid-column: 4;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("./Images/PNG/close-outline.svg");
+  background-size: 100%;
+  background-position: center;
+  margin: auto;
+  transform: scale(1);
+  color: #000;
+}
+
+#the_crad_container #the_crad #close_crad:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+#the_crad_container #the_crad #close_crad:active {
+  transform: scale(1);
+}
+
+.a-enter-vr {
+  background: rgba(55, 55, 60, 0);
+}
+
+.a-enter-vr .a-enter-vr-button {
+  background: rgba(55, 55, 60, 0);
+  border-radius: 0%;
+  background-image: url("./Style/Images/PNG/VR-icon.png");
+  background-size: 90%;
+  background-position: center;
+  transform: scale(1);
+  filter: invert(100%);
+}
+
+.a-enter-vr .a-enter-vr-button:hover {
+  background-image: url("./Style/Images/PNG/VR-icon.png");
+  transform: scale(1.1);
+}
+
+.a-enter-vr:hover {
+  background: rgba(55, 55, 60, 0);
+}
+
+@media all and (max-width: 1000px) {
+  #the_crad_container #the_crad {
+    width: 88%;
+    border: #f1f1f1 0.5em solid;
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(auto);
+  }
+  #the_crad_container #the_crad #the_art_picture {
+    grid-column: 1/5;
+    grid-row: 2/8;
+  }
+  #the_crad_container #the_crad #close_crad {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  #the_crad_container #the_crad #art_title {
+    font-size: 0.6em;
+    font-weight: 500;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+  }
+  #the_crad_container #the_crad #le_créer_par {
+    grid-column: 1/5;
+    grid-row: 8;
+    font-size: 1em;
+    font-weight: 900;
+  }
+  #the_crad_container #the_crad #art_author {
+    grid-column: 1/5;
+    grid-row: 9;
+  }
+  #the_crad_container #the_crad #dimension_title {
+    grid-column: 1/5;
+    grid-row: 10;
+  }
+  #the_crad_container #the_crad #the_art_size {
+    grid-column: 1/5;
+    grid-row: 11;
+  }
+  #the_crad_container #the_crad #btn_container {
+    grid-column: 3/5;
+    grid-row: 11;
+    font-size: 0.9em;
   }
 }/*# sourceMappingURL=Style.css.map */
