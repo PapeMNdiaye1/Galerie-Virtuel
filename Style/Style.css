@@ -292,8 +292,8 @@ html {
 }
 
 #dimension_title {
-  grid-column: 3/5;
   grid-row: 6;
+  grid-column: 3/5;
 }
 
 #the_crad_container #the_crad #the_art_size {
@@ -325,6 +325,11 @@ html {
   align-items: center;
   justify-content: center;
   display: none;
+}
+
+#audio-container {
+  grid-column: 3/5;
+  grid-row: 13;
 }
 
 #the_crad_container #the_crad #close_crad {
@@ -420,14 +425,19 @@ html {
     grid-row: 10;
     font-size: 1em;
     font-weight: 900;
+    display: none;
   }
   #the_crad_container #the_crad #the_art_size {
     grid-column: 1/5;
     grid-row: 11;
+    display: none;
   }
   #the_crad_container #the_crad #btn_container {
     grid-column: 3/5;
     grid-row: 11;
     font-size: 0.9em;
+  }
+  #the_crad_container #the_crad #audio-container {
+    grid-column: 1/6;
   }
 }/*# sourceMappingURL=Style.css.map */

@@ -325,6 +325,7 @@ html {
             grid-column: 3 / 5;
             grid-row: 3;
         }
+      
         
     }
 }
@@ -335,8 +336,8 @@ html {
 }
 
 #dimension_title {
-    grid-column: 3 / 5;
     grid-row: 6;
+    grid-column: 3 / 5;
 }
 
 #the_crad_container #the_crad #the_art_size {
@@ -368,6 +369,11 @@ html {
     align-items: center;
     justify-content: center;
     display: none;
+}
+#audio-container{ 
+    // background-color: #222;
+    grid-column: 3 / 5;
+    grid-row: 13;
 }
 
 #the_crad_container #the_crad #close_crad {
@@ -470,15 +476,22 @@ html {
                 grid-row: 10;
                 font-size: 1em;
                 font-weight: 900;
+                display: none;
             }
             #the_art_size{
                 grid-column: 1 / 5;
                 grid-row: 11;
+                display: none;
             }
             #btn_container {
                 grid-column: 3 / 5;
                 grid-row: 11;
                 font-size: .9em;
+            }
+            #audio-container
+            {
+                grid-column: 1 / 6;
+                // grid-row: 13;
             }
     }
 
