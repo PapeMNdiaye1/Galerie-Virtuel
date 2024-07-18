@@ -800,7 +800,7 @@
                    ............................
                    ............................
                    ............................;
-            Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+            Price : 6.799 000 francs (10460 €); Sound : DOCTA;
             PlaneRotation : -280
             ">
             </a-plane>
@@ -815,7 +815,7 @@ Size :.................
                    ............................
                    ............................
                    ............................;
-Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+Price : 6.799 000 francs (10460 €); Sound : DOCTA;
 PlaneRotation : -280
 ">
             </a-plane>
@@ -879,7 +879,7 @@ Size :.................
                    ............................
                    ............................
                    ............................;
-Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+Price : 6.799 000 francs (10460 €); Sound : DOCTA;
 PlaneRotation -280: 
 ">
             </a-plane>
@@ -967,7 +967,7 @@ PlaneRotation : 280;
                    ............................
                    ............................
                    ............................;
-        Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+        Price : 6.799 000 francs (10460 €); Sound : DOCTA;
         PlaneRotation : -280
         ">
             </a-plane>
@@ -983,7 +983,7 @@ Size :.................
                    ............................
                    ............................
                    ............................;
-Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+Price : 6.799 000 francs (10460 €); Sound : DOCTA;
 PlaneRotation : -280
 ">
             </a-plane>
@@ -1060,7 +1060,7 @@ Size :.................
                    ............................
                    ............................
                    ............................;
-Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+Price : 6.799 000 francs (10460 €); Sound : SADIO;
 PlaneRotation : 280
 ">
             </a-plane>
@@ -1097,7 +1097,7 @@ PlaneRotation : 280
                    ............................
                    ............................
                    ............................;
-    Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+    Price : 6.799 000 francs (10460 €); Sound : SADIO;
     PlaneRotation : 180
     ">
 
@@ -1132,7 +1132,7 @@ Size :.................
                    ............................
                    ............................
                    ............................;
-Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
+Price : 6.799 000 francs (10460 €); Sound : SADIO;
 PlaneRotation : 180
 ">
             </a-plane>
@@ -1332,7 +1332,6 @@ PlaneRotation : 280
         the_close_crad.addEventListener('click', function () {
             the_crad_container.style.display = 'none'
             TheAudioContainer.currentTime = 0
-
             TheAudioContainer.replaceChildren("")
             TheAudioContainer.load()
 
@@ -1503,6 +1502,9 @@ PlaneRotation : 280
                 this.el.setAttribute('event-set__mouseleave', "scale", ".08 .08 .08")
                 this.el.addEventListener('click', function () {
                     ThePlane.setAttribute("scale", "0 0 0");
+                    TheAudioContainer.currentTime = 0
+            TheAudioContainer.replaceChildren("")
+            TheAudioContainer.load()
                     // TheAudioContainer.pause()
             // TheAudioContainer.currentTime = 0
                 })
