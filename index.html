@@ -88,6 +88,7 @@
             <img id="Dote-1" src="./Style/Images/PNG/Dote_1.png">
             <img id="Dote-2" src="./Style/Images/PNG/Dote_2.png">
             <img id="Dote-3" src="./Style/Images/PNG/Dote_3.png">
+            <!-- <img id="the_sound" src="./Sons/Ambience.mp3"> -->
 
             <img id="Tableaux-1" src="./Style/Images/Tableaux-Infos/Info-1(TAAHA-TEXTE).png">
             <img id="Tableaux-2" src="./Style/Images/Tableaux-Infos/Info-2(TAAHA).png ">
@@ -111,10 +112,11 @@
             <img id="Tableaux-20" src="./Style/Images/Tableaux-Infos/Info-20(SADIO-TEXTE).png">
             <img id="Tableaux-21" src="./Style/Images/Tableaux-Infos/Info-21(KHADIJA).png">
             <img id="Tableaux-22" src="./Style/Images/Tableaux-Infos/Info-22(KHADIJA-TEXTE).png">
-
+            
+            <source id="the_sound" src="./Sons/Ambience.mp3" type="audio/mpeg">
         </a-assets>
 
-
+        <a-sound position="0 15 0" sound="src: #the_sound; autoplay: true; loop: true" allow="autoplay"></a-sound>
 
         <a-entity laser-controls="hand: left"
             raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5">
@@ -147,7 +149,6 @@
             animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
         </a-sky>
         <!-- ############################################################ -->
-        <!-- <a-sound position="0 0 0" sound="src: #the_sound; autoplay: true; loop: true" allow="autoplay"></a-sound> -->
         <!-- ################################################################## -->
         <!-- ########################## ARROWS ################################ -->
         <!-- ################################################################## -->
@@ -1505,8 +1506,6 @@ PlaneRotation : 280
                     TheAudioContainer.currentTime = 0
             TheAudioContainer.replaceChildren("")
             TheAudioContainer.load()
-                    // TheAudioContainer.pause()
-            // TheAudioContainer.currentTime = 0
                 })
             }
         });
