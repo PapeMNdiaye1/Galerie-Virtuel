@@ -276,7 +276,7 @@ html {
     #the_crad {
         background: #f1f1f1;
         width: 50em;
-        height: 30em;
+        max-height: 27em;
         border: .5em #f1f1f1 solid;
         border-radius: .5em;
         padding: .1em;
@@ -490,8 +490,11 @@ html {
             }
             #audio-container
             {
-                grid-column: 1 / 6;
-                // grid-row: 13;
+                grid-column: 1 / 5;
+                grid-row: 10;
+                @include cent();
+                // background-color: #222;
+                width: 100%;
             }
     }
 
