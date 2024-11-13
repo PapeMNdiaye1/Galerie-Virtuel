@@ -1,359 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="./Style/Images/PNG/favicon-2.png" />
-    <meta name="description" content=" Musee Commemoration Bateau Le Joola" />
-    <meta name="Keywords"
-        content=" Visualisation architecturale, ArchViz, Architectur, Visualisation 3D, 3D sénégal, Architectur sénégal," />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Galerie Virtuel
-    </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Galerie Virtuel" />
+    <meta
+      name="Keywords"
+      content=" Visualisation architecturale, ArchViz, Architectur, Visualisation 3D, 3D sénégal, Architectur sénégal,"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerie Virtuel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script rel=preload src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js">
-    </script>
+    <script
+      rel="preload"
+      src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"
+    ></script>
 
-    <link rel="stylesheet" href="./Style/Style.css">
+    <link rel="stylesheet" href="./Style/Style.css" />
     <!-- ########################################################################################### -->
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="the_crad_container">
-        <div id="the_crad">
-
-            <div id="the_art_picture">
-                <img src="./Style/Images/Tableaux/ABDALAH.jpg" width='90%' alt="Nimp">
-            </div>
-
-            <div id="art_title">
-                TEFESS
-            </div>
-
-            <div id="le_créer_par">Créer par</div>
-
-            <div id='art_author'>
-                Mamadou Gaye
-            </div>
-
-            <div id="the_art_price">
-                4.875 000 francs (7500 €)
-            </div>
-
-            <dir id="dimension_title">Description</dir>
-
-            <div id="the_art_size">
-                2.04/1.84
-            </div>
-
-            <div id="btn_container">Plus d'Informations</div>
-
-            <div id="close_crad">
-            </div>
-
-              <audio controls id="audio-container">
-              </audio>
-
+      <div id="the_crad">
+        <div id="the_art_picture">
+          <img
+            src="./Style/Images/Tableaux/ABDALAH.jpg"
+            width="90%"
+            alt="Nimp"
+          />
         </div>
 
+        <div id="art_title">TEFESS</div>
+
+        <div id="le_créer_par">Créer par</div>
+
+        <div id="art_author">Mamadou Gaye</div>
+
+        <div id="the_art_price">4.875 000 francs (7500 €)</div>
+
+        <dir id="dimension_title">Description</dir>
+
+        <div id="the_art_size">2.04/1.84</div>
+
+        <div id="btn_container">Plus d'Informations</div>
+
+        <div id="close_crad"></div>
+
+        <audio controls id="audio-container"></audio>
+      </div>
     </div>
 
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse">
-
-        <a-assets>
-
-            <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
-            <img id="Scene-1" src="./Style/Images/Scene-1.jpg">
-            <img id="Scene-2" src="./Style/Images/Scene-2.jpg">
-            <img id="Scene-3" src="./Style/Images/Scene-3.jpg">
-            <img id="Scene-4" src="./Style/Images/Scene-4.jpg">
-            <img id="Scene-5" src="./Style/Images/Scene-5.jpg">
-            <img id="Scene-6" src="./Style/Images/Scene-6.jpg">
-            <img id="Scene-7" src="./Style/Images/Scene-7.jpg">
-            <img id="Scene-8" src="./Style/Images/Scene-8.jpg">
-            <img id="Scene-9" src="./Style/Images/Scene-9.jpg">
-            <img id="Scene-10" src="./Style/Images/Scene-10.jpg">
-            <img id="Scene-11" src="./Style/Images/Scene-11.jpg">
-            <img id="Scene-12" src="./Style/Images/Scene-12.jpg">
-
-            <img id="Loader" src="./Style/Images/PNG/Loader.png">
-            <img id="Dote-1" src="./Style/Images/PNG/Dote_1.png">
-            <img id="Dote-2" src="./Style/Images/PNG/Dote_2.png">
-            <img id="Dote-3" src="./Style/Images/PNG/Dote_3.png">
-            <!-- <img id="the_sound" src="./Sons/Ambience.mp3"> -->
-
-            <img id="Tableaux-1" src="./Style/Images/Tableaux-Infos/Info-1(TAAHA-TEXTE).png">
-            <img id="Tableaux-2" src="./Style/Images/Tableaux-Infos/Info-2(TAAHA).png ">
-            <img id="Tableaux-3" src="./Style/Images/Tableaux-Infos/Info-3(HASSANE-TEXTE).png ">
-            <img id="Tableaux-4" src="./Style/Images/Tableaux-Infos/Info-4(HASSANE).png">
-            <img id="Tableaux-5" src="./Style/Images/Tableaux-Infos/Info-5(OUMAYMA).png">
-            <img id="Tableaux-6" src="./Style/Images/Tableaux-Infos/Info-6(OUMAYMA-TEXTE).png">
-            <img id="Tableaux-7" src="./Style/Images/Tableaux-Infos/Info-7(ABDASSAMAD-TEXTE).png">
-            <img id="Tableaux-8" src="./Style/Images/Tableaux-Infos/Info-8(ABDASSAMAD).png">
-            <img id="Tableaux-9" src="./Style/Images/Tableaux-Infos/Info-9(ABDALAH).png">
-            <img id="Tableaux-10" src="./Style/Images/Tableaux-Infos/Info-10(ABDALAH-TEXTE).png">
-            <img id="Tableaux-11" src="./Style/Images/Tableaux-Infos/Info-11(NS-BA).png">
-            <img id="Tableaux-12" src="./Style/Images/Tableaux-Infos/Info-12(NS-BA-TEXTE).png">
-            <img id="Tableaux-13" src="./Style/Images/Tableaux-Infos/Info-13(DOCTA).png">
-            <img id="Tableaux-14" src="./Style/Images/Tableaux-Infos/Info-14(DOCTA-TEXTE).png">
-            <img id="Tableaux-15" src="./Style/Images/Tableaux-Infos/Info-15(DOUTS).png">
-            <img id="Tableaux-16" src="./Style/Images/Tableaux-Infos/Info-16(DOUTS-TEXTE).png">
-            <img id="Tableaux-17" src="./Style/Images/Tableaux-Infos/Info-17(SOPHIE).png">
-            <img id="Tableaux-18" src="./Style/Images/Tableaux-Infos/Info-18(SOPHIE-TEXTE).png">
-            <img id="Tableaux-19" src="./Style/Images/Tableaux-Infos/Info-19(SADIO).png">
-            <img id="Tableaux-20" src="./Style/Images/Tableaux-Infos/Info-20(SADIO-TEXTE).png">
-            <img id="Tableaux-21" src="./Style/Images/Tableaux-Infos/Info-21(KHADIJA).png">
-            <img id="Tableaux-22" src="./Style/Images/Tableaux-Infos/Info-22(KHADIJA-TEXTE).png">
-            
-            <source id="the_sound" src="./Sons/Ambience.mp3" type="audio/mpeg">
-        </a-assets>
-
-        <a-sound position="0 15 0" sound="src: #the_sound; autoplay: true; loop: true" allow="autoplay"></a-sound>
-
-        <a-entity laser-controls="hand: left"
-            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5">
-        </a-entity>
-
-        <a-entity laser-controls="hand: right"
-            raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5">
-        </a-entity>
-
-        <!--! ##################################################### -->
-        <a-entity id="the-plane-rotater" rotation="0 0 0">
-
-            <a-plane data-clickable id="the-plane" material="src:#Loader; transparent: true" scale="0 0 0"
-                position="-0 1 -2" rotation="0 0 0" color="#CCC" height="2.3" width="2" the_plane>
-                <a-plane data-clickable material="src: #Dote-3; transparent: true" scale=" 0.08 0.08 0.08"
-                    position="1 1.2 0" color="#f1f1f1" height="2" width="2" close_the_plane>
-                </a-plane>
-
-                <a-plane data-clickable material="src:#Loader ; transparent: true" scale=" 1 1 1" position="0 0 -.1"
-                    height="2" width="2">
-                </a-plane>
-
-            </a-plane>
-
-        </a-entity>
-
-        <!--! ##################################################### -->
-        <a-sky id="image180" radius="500" rotation="0 0 0" src="#Scene-1" look-controls-invert-y="false"
-            animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
-            animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
-        </a-sky>
-        <!-- ############################################################ -->
-        <!-- ################################################################## -->
-        <!-- ########################## ARROWS ################################ -->
-        <!-- ################################################################## -->
-        <!-- Group-1. -->
-        <a-entity scale="1 1 1" class="groups" id="Group-1" visible="true">
-
-            <a-plane scale="10 10 10" data-clickable class="pintings clickable" position="1.03878 -31.37972 -58.09612"
-                rotation="-58.27095368039499 -2.2219303295173325 179.04186252704557"
-                material="src: #Arrow-1; transparent:true" the_dote="Name_of_dote: Dote-2 ; Group_to_activate: Group-2">
-            </a-plane>
-
-        </a-entity>
-        <!-- Group-2. -->
-        <a-entity scale=" 0 0 0" class="groups" id="Group-2" visible="false">
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true "
-                position="-2.86179 -26.16195 52.02709" rotation="-74.37449 148.97973 165.09882"
-                the_dote="Name_of_dote: Dote-1 ; Group_to_activate: Group-1">
-            </a-plane>
-
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-1.21062 -33.06081 -78.21289" rotation="-69.49464 3.90096 -184.21607"
-                the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3">
-            </a-plane>
-
-        </a-entity>
-        <!-- Group-3 -->
-        <a-entity scale=" 0 0 0" class="groups" id="Group-3" visible="false">
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-0.30473 -31.58943 -58.7935"
-                rotation="-73.81529866229421 9.582719123563018 167.29737364245395"
-                the_dote="Name_of_dote: Dote-4 ; Group_to_activate: Group-4">
-            </a-plane>
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-0.2 -25.01998 61.70265" rotation="-61.73448355196081 -165.93258817445232 -5.675719918565934"
-                the_dote="Name_of_dote: Dote-2 ; Group_to_activate: Group-2">
-            </a-plane>
-
-        </a-entity>
-        <!-- Group-4 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-4" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-1.21203 -34.33422 55.41667"
-                rotation="-40.93668854650706 -159.5618704503927 -7.577366840605138"
-                the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3">
-            </a-plane>
-
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-0.09615 -24.60212 -43.13895"
-                rotation="-84.95016045286664 47.565810236170684 32.91527941467553"
-                the_dote="Name_of_dote: Dote-5 ; Group_to_activate: Group-5">
-            </a-plane>
-
-
-        </a-entity>
-        <!-- Group-5 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-5" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="0 -25.15973 49.2646" rotation="-69.13251460269001 179.9998479605043 179.9998479605043"
-                the_dote="Name_of_dote: Dote-4 ; Group_to_activate: Group-4">
-            </a-plane>
-
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="1.22133 -25.81638 -63.81368" rotation="-65.01581284467504 0 -0.0005729577951308233"
-                the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6">
-            </a-plane>
-
-
-
-        </a-entity>
-        <!-- Group-6 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-6" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="0 -27.70397 65.28648" rotation="-69.13251460269001 179.9998479605043 179.9998479605043"
-                the_dote="Name_of_dote: Dote-5 ; Group_to_activate: Group-5">
-            </a-plane>
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="0 -23.06576 -50.80606" rotation="-65.01581284467504 0 -0.0005729577951308233"
-                the_dote="Name_of_dote: Dote-7 ; Group_to_activate: Group-7">
-            </a-plane>
-
-
-        </a-entity>
-        <!-- Group-7 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-7" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                rotation="-69.13251460269001 179.9998479605043 179.9998479605043" position="0 -19.3901 52.99418"
-                the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6">
-            </a-plane>
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-76.9267 -17.45848 6.79627" rotation="-79.40221012261489 89.17343236077593 -88.42343060694968"
-                the_dote="Name_of_dote: Dote-8 ; Group_to_activate: Group-8">
-            </a-plane>
-
-
-
-
-        </a-entity>
-        <!-- Group-8 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-8" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="57.13239 -17.75818 -5.06363" rotation="-79.7912484655087 -78.11019029459487 78.29296383124161"
-                the_dote="Name_of_dote: Dote-7 ; Group_to_activate: Group-7">
-            </a-plane>
-
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-66.1511 -11.73862 0.58251" rotation="-79.37757293742425 93.99888291136773 -93.33253299563057"
-                the_dote="Name_of_dote: Dote-9 ; Group_to_activate: Group-9">
-            </a-plane>
-
-
-
-
-        </a-entity>
-        <!-- Group-9 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-9" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="81.57845 -17.21213 -0.18934" rotation="-79.7912484655087 -78.11019029459487 78.29296383124161"
-                the_dote="Name_of_dote: Dote-8 ; Group_to_activate: Group-8">
-            </a-plane>
-
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-2.87523 -21.49937 57.72642"
-                rotation="-47.58529080120513 -173.75919165593936 173.27848006582462"
-                the_dote="Name_of_dote: Dote-10 ; Group_to_activate: Group-10">
-            </a-plane>
-
-
-
-        </a-entity>
-        <!-- Group-10 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-10" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="0.12198 -23.55222 -68.76812"
-                rotation="-68.24099227346646 -3.042978849939802 -0.37987101817173585"
-                the_dote="Name_of_dote: Dote-9 ; Group_to_activate: Group-9">
-            </a-plane>
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-5.08294 -22.12499 60.31214"
-                rotation="-65.42318583701305 179.46184059087645 171.9102568510522"
-                the_dote="Name_of_dote: Dote-11 ; Group_to_activate: Group-11">
-            </a-plane>
-        </a-entity>
-        <!-- Group-11 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-11" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="0.12198 -28.87785 -65.44472"
-                rotation="-68.24099227346646 -3.042978849939802 -0.37987101817173585"
-                the_dote="Name_of_dote: Dote-10 ; Group_to_activate: Group-10">
-            </a-plane>
-
-
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-0.60246 -22.30527 55.43052"
-                rotation="-48.542703276868735 179.66180286137714 171.6741982394583"
-                the_dote="Name_of_dote: Dote-12 ; Group_to_activate: Group-12">
-            </a-plane>
-
-
-
-        </a-entity>
-        <!-- Group-12 -->
-        <a-entity scale="0 0 0" class="groups" id="Group-12" visible="false">
-
-            <a-plane scale="10 10 10" data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="-2.44395 -33.80793 -50.51296"
-                rotation="-68.24099227346646 -3.042978849939802 -0.37987101817173585"
-                the_dote="Name_of_dote: Dote-11 ; Group_to_activate: Group-11">
-            </a-plane>
-
-
-
-        </a-entity>
-        <!-- ################################################################# -->
-        <!-- ##########################SCEAN################################## -->
-        <!-- 1################################################################ -->
-        <a-entity scale="1 1 1 " class="big-pintings-containers" id="big-pintings-containers-1" visible="true">
-            <a-plane data-clickable scale="150 140 0" opacity="0" class="pintings clickable"
-                rotation="-0.4509177847679579 91.46927424586515 1.0811713594118635"
-                position="-310.50429 12.12882 122.24385" color="#000" the_pintings="Pinting_Name : TAAHA-TEXTE ;
+      <a-assets>
+        <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png" />
+        <img id="Scene-1" src="./Style/Images/Scene-1.jpg" />
+        <img id="Scene-2" src="./Style/Images/Scene-2.jpg" />
+        <img id="Scene-3" src="./Style/Images/Scene-3.jpg" />
+        <img id="Scene-4" src="./Style/Images/Scene-4.jpg" />
+        <img id="Scene-5" src="./Style/Images/Scene-5.jpg" />
+        <img id="Scene-6" src="./Style/Images/Scene-6.jpg" />
+        <img id="Scene-7" src="./Style/Images/Scene-7.jpg" />
+        <img id="Scene-8" src="./Style/Images/Scene-8.jpg" />
+        <img id="Scene-9" src="./Style/Images/Scene-9.jpg" />
+        <img id="Scene-10" src="./Style/Images/Scene-10.jpg" />
+        <img id="Scene-11" src="./Style/Images/Scene-11.jpg" />
+        <img id="Scene-12" src="./Style/Images/Scene-12.jpg" />
+
+        <img id="Loader" src="./Style/Images/PNG/Loader.png" />
+        <img id="Dote-1" src="./Style/Images/PNG/Dote_1.png" />
+        <img id="Dote-2" src="./Style/Images/PNG/Dote_2.png" />
+        <img id="Dote-3" src="./Style/Images/PNG/Dote_3.png" />
+        <!-- <img id="the_sound" src="./Sons/Ambience.mp3"> -->
+
+        <img
+          id="Tableaux-1"
+          src="./Style/Images/Tableaux-Infos/Info-1(TAAHA-TEXTE).png"
+        />
+        <img
+          id="Tableaux-2"
+          src="./Style/Images/Tableaux-Infos/Info-2(TAAHA).png "
+        />
+        <img
+          id="Tableaux-3"
+          src="./Style/Images/Tableaux-Infos/Info-3(HASSANE-TEXTE).png "
+        />
+        <img
+          id="Tableaux-4"
+          src="./Style/Images/Tableaux-Infos/Info-4(HASSANE).png"
+        />
+        <img
+          id="Tableaux-5"
+          src="./Style/Images/Tableaux-Infos/Info-5(OUMAYMA).png"
+        />
+        <img
+          id="Tableaux-6"
+          src="./Style/Images/Tableaux-Infos/Info-6(OUMAYMA-TEXTE).png"
+        />
+        <img
+          id="Tableaux-7"
+          src="./Style/Images/Tableaux-Infos/Info-7(ABDASSAMAD-TEXTE).png"
+        />
+        <img
+          id="Tableaux-8"
+          src="./Style/Images/Tableaux-Infos/Info-8(ABDASSAMAD).png"
+        />
+        <img
+          id="Tableaux-9"
+          src="./Style/Images/Tableaux-Infos/Info-9(ABDALAH).png"
+        />
+        <img
+          id="Tableaux-10"
+          src="./Style/Images/Tableaux-Infos/Info-10(ABDALAH-TEXTE).png"
+        />
+        <img
+          id="Tableaux-11"
+          src="./Style/Images/Tableaux-Infos/Info-11(NS-BA).png"
+        />
+        <img
+          id="Tableaux-12"
+          src="./Style/Images/Tableaux-Infos/Info-12(NS-BA-TEXTE).png"
+        />
+        <img
+          id="Tableaux-13"
+          src="./Style/Images/Tableaux-Infos/Info-13(DOCTA).png"
+        />
+        <img
+          id="Tableaux-14"
+          src="./Style/Images/Tableaux-Infos/Info-14(DOCTA-TEXTE).png"
+        />
+        <img
+          id="Tableaux-15"
+          src="./Style/Images/Tableaux-Infos/Info-15(DOUTS).png"
+        />
+        <img
+          id="Tableaux-16"
+          src="./Style/Images/Tableaux-Infos/Info-16(DOUTS-TEXTE).png"
+        />
+        <img
+          id="Tableaux-17"
+          src="./Style/Images/Tableaux-Infos/Info-17(SOPHIE).png"
+        />
+        <img
+          id="Tableaux-18"
+          src="./Style/Images/Tableaux-Infos/Info-18(SOPHIE-TEXTE).png"
+        />
+        <img
+          id="Tableaux-19"
+          src="./Style/Images/Tableaux-Infos/Info-19(SADIO).png"
+        />
+        <img
+          id="Tableaux-20"
+          src="./Style/Images/Tableaux-Infos/Info-20(SADIO-TEXTE).png"
+        />
+        <img
+          id="Tableaux-21"
+          src="./Style/Images/Tableaux-Infos/Info-21(KHADIJA).png"
+        />
+        <img
+          id="Tableaux-22"
+          src="./Style/Images/Tableaux-Infos/Info-22(KHADIJA-TEXTE).png"
+        />
+
+        <source id="the_sound" src="./Sons/Ambience.mp3" type="audio/mpeg" />
+      </a-assets>
+
+      <a-sound
+        position="0 15 0"
+        sound="src: #the_sound; autoplay: true; loop: true"
+        allow="autoplay"
+      ></a-sound>
+
+      <a-entity
+        laser-controls="hand: left"
+        raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"
+      >
+      </a-entity>
+
+      <a-entity
+        laser-controls="hand: right"
+        raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"
+      >
+      </a-entity>
+
+      <!--! ##################################################### -->
+      <a-entity id="the-plane-rotater" rotation="0 0 0">
+        <a-plane
+          data-clickable
+          id="the-plane"
+          material="src:#Loader; transparent: true"
+          scale="0 0 0"
+          position="-0 1 -2"
+          rotation="0 0 0"
+          color="#CCC"
+          height="2.3"
+          width="2"
+          the_plane
+        >
+          <a-plane
+            data-clickable
+            material="src: #Dote-3; transparent: true"
+            scale=" 0.08 0.08 0.08"
+            position="1 1.2 0"
+            color="#f1f1f1"
+            height="2"
+            width="2"
+            close_the_plane
+          >
+          </a-plane>
+
+          <a-plane
+            data-clickable
+            material="src:#Loader ; transparent: true"
+            scale=" 1 1 1"
+            position="0 0 -.1"
+            height="2"
+            width="2"
+          >
+          </a-plane>
+        </a-plane>
+      </a-entity>
+
+      <!--! ##################################################### -->
+      <a-sky
+        id="image180"
+        radius="500"
+        rotation="0 0 0"
+        src="#Scene-1"
+        look-controls-invert-y="false"
+        animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+        animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"
+      >
+      </a-sky>
+      <!-- ############################################################ -->
+      <!-- ################################################################## -->
+      <!-- ########################## ARROWS ################################ -->
+      <!-- ################################################################## -->
+      <!-- Group-1. -->
+      <a-entity scale="1 1 1" class="groups" id="Group-1" visible="true">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="pintings clickable"
+          position="1.03878 -31.37972 -58.09612"
+          rotation="-58.27095368039499 -2.2219303295173325 179.04186252704557"
+          material="src: #Arrow-1; transparent:true"
+          the_dote="Name_of_dote: Dote-2 ; Group_to_activate: Group-2"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-2. -->
+      <a-entity scale=" 0 0 0" class="groups" id="Group-2" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true "
+          position="-2.86179 -26.16195 52.02709"
+          rotation="-74.37449 148.97973 165.09882"
+          the_dote="Name_of_dote: Dote-1 ; Group_to_activate: Group-1"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-1.21062 -33.06081 -78.21289"
+          rotation="-69.49464 3.90096 -184.21607"
+          the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-3 -->
+      <a-entity scale=" 0 0 0" class="groups" id="Group-3" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-0.30473 -31.58943 -58.7935"
+          rotation="-73.81529866229421 9.582719123563018 167.29737364245395"
+          the_dote="Name_of_dote: Dote-4 ; Group_to_activate: Group-4"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-0.2 -25.01998 61.70265"
+          rotation="-61.73448355196081 -165.93258817445232 -5.675719918565934"
+          the_dote="Name_of_dote: Dote-2 ; Group_to_activate: Group-2"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-4 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-4" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-1.21203 -34.33422 55.41667"
+          rotation="-40.93668854650706 -159.5618704503927 -7.577366840605138"
+          the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-0.09615 -24.60212 -43.13895"
+          rotation="-84.95016045286664 47.565810236170684 32.91527941467553"
+          the_dote="Name_of_dote: Dote-5 ; Group_to_activate: Group-5"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-5 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-5" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="0 -25.15973 49.2646"
+          rotation="-69.13251460269001 179.9998479605043 179.9998479605043"
+          the_dote="Name_of_dote: Dote-4 ; Group_to_activate: Group-4"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="1.22133 -25.81638 -63.81368"
+          rotation="-65.01581284467504 0 -0.0005729577951308233"
+          the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-6 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-6" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="0 -27.70397 65.28648"
+          rotation="-69.13251460269001 179.9998479605043 179.9998479605043"
+          the_dote="Name_of_dote: Dote-5 ; Group_to_activate: Group-5"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="0 -23.06576 -50.80606"
+          rotation="-65.01581284467504 0 -0.0005729577951308233"
+          the_dote="Name_of_dote: Dote-7 ; Group_to_activate: Group-7"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-7 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-7" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          rotation="-69.13251460269001 179.9998479605043 179.9998479605043"
+          position="0 -19.3901 52.99418"
+          the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-76.9267 -17.45848 6.79627"
+          rotation="-79.40221012261489 89.17343236077593 -88.42343060694968"
+          the_dote="Name_of_dote: Dote-8 ; Group_to_activate: Group-8"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-8 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-8" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="57.13239 -17.75818 -5.06363"
+          rotation="-79.7912484655087 -78.11019029459487 78.29296383124161"
+          the_dote="Name_of_dote: Dote-7 ; Group_to_activate: Group-7"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-66.1511 -11.73862 0.58251"
+          rotation="-79.37757293742425 93.99888291136773 -93.33253299563057"
+          the_dote="Name_of_dote: Dote-9 ; Group_to_activate: Group-9"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-9 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-9" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="81.57845 -17.21213 -0.18934"
+          rotation="-79.7912484655087 -78.11019029459487 78.29296383124161"
+          the_dote="Name_of_dote: Dote-8 ; Group_to_activate: Group-8"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-2.87523 -21.49937 57.72642"
+          rotation="-47.58529080120513 -173.75919165593936 173.27848006582462"
+          the_dote="Name_of_dote: Dote-10 ; Group_to_activate: Group-10"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-10 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-10" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="0.12198 -23.55222 -68.76812"
+          rotation="-68.24099227346646 -3.042978849939802 -0.37987101817173585"
+          the_dote="Name_of_dote: Dote-9 ; Group_to_activate: Group-9"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-5.08294 -22.12499 60.31214"
+          rotation="-65.42318583701305 179.46184059087645 171.9102568510522"
+          the_dote="Name_of_dote: Dote-11 ; Group_to_activate: Group-11"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-11 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-11" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="0.12198 -28.87785 -65.44472"
+          rotation="-68.24099227346646 -3.042978849939802 -0.37987101817173585"
+          the_dote="Name_of_dote: Dote-10 ; Group_to_activate: Group-10"
+        >
+        </a-plane>
+
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-0.60246 -22.30527 55.43052"
+          rotation="-48.542703276868735 179.66180286137714 171.6741982394583"
+          the_dote="Name_of_dote: Dote-12 ; Group_to_activate: Group-12"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- Group-12 -->
+      <a-entity scale="0 0 0" class="groups" id="Group-12" visible="false">
+        <a-plane
+          scale="10 10 10"
+          data-clickable
+          class="Dote"
+          material="src: #Arrow-1; transparent:true"
+          position="-2.44395 -33.80793 -50.51296"
+          rotation="-68.24099227346646 -3.042978849939802 -0.37987101817173585"
+          the_dote="Name_of_dote: Dote-11 ; Group_to_activate: Group-11"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- ################################################################# -->
+      <!-- ##########################SCEAN################################## -->
+      <!-- 1################################################################ -->
+      <a-entity
+        scale="1 1 1 "
+        class="big-pintings-containers"
+        id="big-pintings-containers-1"
+        visible="true"
+      >
+        <a-plane
+          data-clickable
+          scale="150 140 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="-0.4509177847679579 91.46927424586515 1.0811713594118635"
+          position="-310.50429 12.12882 122.24385"
+          color="#000"
+          the_pintings="Pinting_Name : TAAHA-TEXTE ;
                 Pinting_Picture:./Style/Images/Tableaux/TAAHA-TEXTE.jpg;
                 Autor_Name :Ina Makosi;
                 Size :.................
@@ -363,11 +536,19 @@
                 ............................;
                 Price : 17.004 000 francs (26160€); Sound :TAAHA1; 
               
-                PlaneRotation : -280">
-            </a-plane>
+                PlaneRotation : -280"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="100 120 0" opacity="0" class="pintings clickable"
-                rotation="0 98.73953570828016 0" position="-205.42941 -1.72972 -81.99426" color="#000" the_pintings="Pinting_Name : TAAHA ;
+        <a-plane
+          data-clickable
+          scale="100 120 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="0 98.73953570828016 0"
+          position="-205.42941 -1.72972 -81.99426"
+          color="#000"
+          the_pintings="Pinting_Name : TAAHA ;
                  Pinting_Picture: ./Style/Images/Tableaux/TAAHA.jpg ;
                   Autor_Name :Ina Makosi;
                    Size :.................
@@ -376,12 +557,19 @@
                    ............................
                    ............................;
                    Price : 4.212 000 francs (6480 €); Sound :TAAHA1;
-                   PlaneRotation : -280">
-            </a-plane>
+                   PlaneRotation : -280"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 140 0" opacity="0" class="pintings clickable"
-                rotation="-1.9944660848503957 -36.75810734661796 0.3941949630500064"
-                position="326.52605 2.13339 -136.98196" color="#000" the_pintings="Pinting_Name : HASSANE-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 140 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="-1.9944660848503957 -36.75810734661796 0.3941949630500064"
+          position="326.52605 2.13339 -136.98196"
+          color="#000"
+          the_pintings="Pinting_Name : HASSANE-TEXTE;
             Pinting_Picture: ./Style/Images/Tableaux/HASSANE-TEXTE.jpg;
             Autor_Name :Ina Makosi;
             Size :.................
@@ -391,11 +579,19 @@
             ............................; 
             Price : 6.799 000 francs (10460 €); Sound :HASSANE;
             PlaneRotation : 280
-            ">
-            </a-plane>
+            "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale=" 130 190 0" opacity="0" class="pintings clickable"
-                rotation="0 -94.92134496152835 0" position="316.75159 -5.66258 106.76175" color="#000" the_pintings="Pinting_Name :HASSANE;
+        <a-plane
+          data-clickable
+          scale=" 130 190 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="0 -94.92134496152835 0"
+          position="316.75159 -5.66258 106.76175"
+          color="#000"
+          the_pintings="Pinting_Name :HASSANE;
             Pinting_Picture: ./Style/Images/Tableaux/HASSANE.jpg ;
                 Autor_Name :Ina Makosi;
                 Size :.................
@@ -404,16 +600,28 @@
                 ............................
                 ............................;
                 Price : 5.928 000 francs (9120 €); Sound :HASSANE; 
-                 PlaneRotation : 280">
-            </a-plane>
-        </a-entity>
-        <!-- 2############################################################ -->
-        <a-entity rotation="0 -720 0" scale="0 0 0 " class="big-pintings-containers" id="big-pintings-containers-2"
-            position="0 0 0" visible="false">
-
-            <a-plane data-clickable scale="150 140 0" opacity="1" class="pintings clickable"
-                rotation="-0.4509177847679579 91.46927424586515 1.0811713594118635"
-                position="-310.50429 12.12882 360.56943" color="#000" the_pintings="Pinting_Name : TAAHA-TEXTE ;
+                 PlaneRotation : 280"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 2############################################################ -->
+      <a-entity
+        rotation="0 -720 0"
+        scale="0 0 0 "
+        class="big-pintings-containers"
+        id="big-pintings-containers-2"
+        position="0 0 0"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="150 140 0"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-0.4509177847679579 91.46927424586515 1.0811713594118635"
+          position="-310.50429 12.12882 360.56943"
+          color="#000"
+          the_pintings="Pinting_Name : TAAHA-TEXTE ;
                 Pinting_Picture:./Style/Images/Tableaux/TAAHA-TEXTE.jpg;
                 Autor_Name :Ina Makosi;
                 Size :.................
@@ -422,11 +630,19 @@
                 ............................
                 ............................;
                 Price : 17.004 000 francs (26160€); Sound : TAAHA1;
-                PlaneRotation : -280">
-            </a-plane>
+                PlaneRotation : -280"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="100 120 0" opacity="1" class="pintings clickable"
-                rotation="0 98.73953570828016 0" position="-205.42941 -1.72972 103.57027" color="#000" the_pintings="Pinting_Name : TAAHA ;
+        <a-plane
+          data-clickable
+          scale="100 120 0"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0 98.73953570828016 0"
+          position="-205.42941 -1.72972 103.57027"
+          color="#000"
+          the_pintings="Pinting_Name : TAAHA ;
                  Pinting_Picture: ./Style/Images/Tableaux/TAAHA.jpg ;
                   Autor_Name :Ina Makosi;
                    Size :.................
@@ -435,11 +651,19 @@
                    ............................
                    ............................;
                    Price : 4.212 000 francs (6480 €); Sound : TAAHA1;
-                   PlaneRotation : -280">
-            </a-plane>
+                   PlaneRotation : -280"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale=" 130 190 0" opacity="0" class="pintings clickable"
-                rotation="0 -122.88283127950278 0" position="270.80406 -5.66258 309.44723" color="#000" the_pintings="Pinting_Name :HASSANE;
+        <a-plane
+          data-clickable
+          scale=" 130 190 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="0 -122.88283127950278 0"
+          position="270.80406 -5.66258 309.44723"
+          color="#000"
+          the_pintings="Pinting_Name :HASSANE;
             Pinting_Picture: ./Style/Images/Tableaux/HASSANE.jpg ;
                 Autor_Name :Ina Makosi;
                 Size :.................
@@ -448,12 +672,19 @@
                 ............................
                 ............................;
                 Price : 5.928 000 francs (9120 €); Sound : HASSANE; 
-                 PlaneRotation : 280">
-            </a-plane>
+                 PlaneRotation : 280"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 140 0" opacity="0" class="pintings clickable"
-                rotation="-4.201499511694327 -64.4760866016618 1.3195218021862858"
-                position="281.38424 2.13339 145.08264" color="#000" the_pintings="Pinting_Name : HASSANE-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 140 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="-4.201499511694327 -64.4760866016618 1.3195218021862858"
+          position="281.38424 2.13339 145.08264"
+          color="#000"
+          the_pintings="Pinting_Name : HASSANE-TEXTE;
             Pinting_Picture: ./Style/Images/Tableaux/HASSANE-TEXTE.jpg;
             Autor_Name :Ina Makosi;
             Size :.................
@@ -463,12 +694,19 @@
                    ............................;
             Price : 6.799 000 francs (10460 €); Sound : HASSANE;
             PlaneRotation : 280
-            ">
-            </a-plane>
+            "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 140 0" opacity="0" class="pintings clickable"
-                rotation="0.6995814678547352 -64.54770632605316 3.6560436907297835"
-                position="281.38424 2.13339 -268.70676" color="#000" the_pintings="Pinting_Name :ABDALAH;
+        <a-plane
+          data-clickable
+          scale="175 140 0"
+          opacity="0"
+          class="pintings clickable"
+          rotation="0.6995814678547352 -64.54770632605316 3.6560436907297835"
+          position="281.38424 2.13339 -268.70676"
+          color="#000"
+          the_pintings="Pinting_Name :ABDALAH;
             Pinting_Picture: ./Style/Images/Tableaux/ABDALAH.jpg;
             Autor_Name :Ina Makosi;
             Size :.................
@@ -478,12 +716,19 @@
                    ............................;
             Price : 6.799 000 francs (10460 €); Sound : ABDALAH;
             PlaneRotation : 280
-            ">
-            </a-plane>
+            "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="120.83293 140 0.00001" opacity="0" class="pintings clickable"
-                rotation="-6.84168903165716 96.57490115827592 0.04984732817638162"
-                position="-281.43513 20.26633 -249.41606" color="#000" the_pintings="Pinting_Name :OUMAYMA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="120.83293 140 0.00001"
+          opacity="0"
+          class="pintings clickable"
+          rotation="-6.84168903165716 96.57490115827592 0.04984732817638162"
+          position="-281.43513 20.26633 -249.41606"
+          color="#000"
+          the_pintings="Pinting_Name :OUMAYMA-TEXTE;
             Pinting_Picture: ./Style/Images/Tableaux/OUMAYMA-TEXTE.jpg;
             Autor_Name :Ina Makosi;
             Size :.................
@@ -493,17 +738,26 @@
                    ............................;
             Price : 6.799 000 francs (10460 €); Sound : OUMAYMA;
             PlaneRotation : -280
-            ">
-            </a-plane>
-
-        </a-entity>
-        <!-- 3############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-3" visible="false">
-
-
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="285.05424 -0.07661 63.93838" color="#000"
-                the_pintings="Pinting_Name :ABDALAH;
+            "
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 3############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-3"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="285.05424 -0.07661 63.93838"
+          color="#000"
+          the_pintings="Pinting_Name :ABDALAH;
         Pinting_Picture: ./Style/Images/Tableaux/ABDALAH.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -513,11 +767,18 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDALAH;
         PlaneRotation : 280
-        ">
-            </a-plane>
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="285.05424 -0.07661 -105.34205" color="#000"
-                the_pintings="Pinting_Name :ABDALAH-TEXTE;
+        "
+        >
+        </a-plane>
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="285.05424 -0.07661 -105.34205"
+          color="#000"
+          the_pintings="Pinting_Name :ABDALAH-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/ABDALAH-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -527,12 +788,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDALAH;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 78.06320775539415 -2.844162495029406"
-                position="-343.58234 35.3286 84.43053" color="#000" the_pintings="Pinting_Name :OUMAYMA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 78.06320775539415 -2.844162495029406"
+          position="-343.58234 35.3286 84.43053"
+          color="#000"
+          the_pintings="Pinting_Name :OUMAYMA-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/OUMAYMA-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -542,11 +810,19 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : OUMAYMA;
     PlaneRotation : -280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="130.24808 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 92.378 -2.84396" position="-230.86072 14.76048 -73.31759" color="#000" the_pintings="Pinting_Name :OUMAYMA;
+        <a-plane
+          data-clickable
+          scale="130.24808 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 92.378 -2.84396"
+          position="-230.86072 14.76048 -73.31759"
+          color="#000"
+          the_pintings="Pinting_Name :OUMAYMA;
     Pinting_Picture: ./Style/Images/Tableaux/OUMAYMA.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -556,16 +832,26 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : OUMAYMA;
     PlaneRotation : -280
-    ">
-            </a-plane>
-
-        </a-entity>
-        <!-- 4############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-4" visible="false">
-
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="285.05424 -0.07661 -207.0592" color="#000"
-                the_pintings="Pinting_Name :ABDASSAMAD;
+    "
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 4############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-4"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="285.05424 -0.07661 -207.0592"
+          color="#000"
+          the_pintings="Pinting_Name :ABDASSAMAD;
         Pinting_Picture: ./Style/Images/Tableaux/ABDASSAMAD.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -576,10 +862,18 @@
         Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
         Sound : ABDASSAMAD;
         PlaneRotation : 280
-        ">
-            </a-plane>
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -77.798 -2.84396" position="192.13239 -0.07661 -282.66006" color="#000" the_pintings="Pinting_Name :ABDASSAMAD-TEXTE;
+        "
+        >
+        </a-plane>
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -77.798 -2.84396"
+          position="192.13239 -0.07661 -282.66006"
+          color="#000"
+          the_pintings="Pinting_Name :ABDASSAMAD-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/ABDASSAMAD-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -589,11 +883,18 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
         PlaneRotation : 280
-        ">
-            </a-plane>
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 78.06320775539415 -2.844162495029406"
-                position="-343.58234 35.3286 -263.4162" color="#000" the_pintings="Pinting_Name :KHADIJA-TEXTE;
+        "
+        >
+        </a-plane>
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 78.06320775539415 -2.844162495029406"
+          position="-343.58234 35.3286 -263.4162"
+          color="#000"
+          the_pintings="Pinting_Name :KHADIJA-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/KHADIJA-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -603,10 +904,18 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : KHADIJA;
     PlaneRotation : -280
-    ">
-            </a-plane>
-            <a-plane data-clickable scale="130.24808 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 92.378 -2.84396" position="-230.86072 14.76048 -306.34948" color="#000" the_pintings="Pinting_Name :KHADIJA;
+    "
+        >
+        </a-plane>
+        <a-plane
+          data-clickable
+          scale="130.24808 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 92.378 -2.84396"
+          position="-230.86072 14.76048 -306.34948"
+          color="#000"
+          the_pintings="Pinting_Name :KHADIJA;
     Pinting_Picture: ./Style/Images/Tableaux/KHADIJA.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -616,16 +925,26 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : KHADIJA;
     PlaneRotation : -280
-    ">
-            </a-plane>
-
-        </a-entity>
-        <!-- 5############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-5" visible="false">
-
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="285.05424 -0.07661 63.93838" color="#000"
-                the_pintings="Pinting_Name :ABDASSAMAD;
+    "
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 5############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-5"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="285.05424 -0.07661 63.93838"
+          color="#000"
+          the_pintings="Pinting_Name :ABDASSAMAD;
         Pinting_Picture: ./Style/Images/Tableaux/ABDASSAMAD.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -635,12 +954,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="285.05424 -0.07661 -105.34205" color="#000"
-                the_pintings="Pinting_Name :ABDASSAMAD-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="285.05424 -0.07661 -105.34205"
+          color="#000"
+          the_pintings="Pinting_Name :ABDASSAMAD-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/ABDASSAMAD-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -650,12 +976,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 78.06320775539415 -2.844162495029406"
-                position="-343.58234 35.3286 84.43053" color="#000" the_pintings="Pinting_Name :KHADIJA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 78.06320775539415 -2.844162495029406"
+          position="-343.58234 35.3286 84.43053"
+          color="#000"
+          the_pintings="Pinting_Name :KHADIJA-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/KHADIJA-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -665,11 +998,19 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : KHADIJA;
     PlaneRotation : -280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="130.24808 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 92.378 -2.84396" position="-230.86072 14.76048 -73.31759" color="#000" the_pintings="Pinting_Name :KHADIJA;
+        <a-plane
+          data-clickable
+          scale="130.24808 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 92.378 -2.84396"
+          position="-230.86072 14.76048 -73.31759"
+          color="#000"
+          the_pintings="Pinting_Name :KHADIJA;
     Pinting_Picture: ./Style/Images/Tableaux/KHADIJA.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -679,16 +1020,26 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : KHADIJA;
     PlaneRotation : -280
-    ">
-            </a-plane>
-
-        </a-entity>
-        <!-- 6############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-6" visible="false">
-
-            <a-plane data-clickable scale="68.99521 140 89.01226" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 -129.31829323441218 -2.844162495029406"
-                position="259.57465 22.40649 406.10744" color="#000" the_pintings="Pinting_Name :ABDASSAMAD;
+    "
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 6############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-6"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="68.99521 140 89.01226"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 -129.31829323441218 -2.844162495029406"
+          position="259.57465 22.40649 406.10744"
+          color="#000"
+          the_pintings="Pinting_Name :ABDASSAMAD;
         Pinting_Picture: ./Style/Images/Tableaux/ABDASSAMAD.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -698,12 +1049,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 -84.09292 -2.844162495029406" position="285.05424 -0.07661 275.68285"
-                color="#000" the_pintings="Pinting_Name :ABDASSAMAD-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 -84.09292 -2.844162495029406"
+          position="285.05424 -0.07661 275.68285"
+          color="#000"
+          the_pintings="Pinting_Name :ABDASSAMAD-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/ABDASSAMAD-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -713,12 +1071,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : ABDASSAMAD;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 125.70235658934156 -2.844162495029406"
-                position="-244.95104 35.3286 411.51543" color="#000" the_pintings="Pinting_Name :KHADIJA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 125.70235658934156 -2.844162495029406"
+          position="-244.95104 35.3286 411.51543"
+          color="#000"
+          the_pintings="Pinting_Name :KHADIJA-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/KHADIJA-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -728,11 +1093,19 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : KHADIJA;
     PlaneRotation : -280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="130.24808 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 92.378 -2.84396" position="-209.66313 14.76048 189.73625" color="#000" the_pintings="Pinting_Name :KHADIJA;
+        <a-plane
+          data-clickable
+          scale="130.24808 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 92.378 -2.84396"
+          position="-209.66313 14.76048 189.73625"
+          color="#000"
+          the_pintings="Pinting_Name :KHADIJA;
     Pinting_Picture: ./Style/Images/Tableaux/KHADIJA.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -742,28 +1115,44 @@
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : KHADIJA;
     PlaneRotation : -280
-    ">
-            </a-plane>
-
-        </a-entity>
-        <!-- 7############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-7" visible="false">
-
-            <!--  -->
-
-        </a-entity>
-        <!-- 8############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-8" visible="false">
-
-            <!--  -->
-
-        </a-entity>
-        <!-- 9############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-9" visible="false">
-
-            <a-plane data-clickable scale="121.03088 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -77.5567130644985 -2.8304115079462666"
-                position="270.72865 -0.11446 303.43375" color="#000" the_pintings="Pinting_Name :NS-BA;
+    "
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 7############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-7"
+        visible="false"
+      >
+        <!--  -->
+      </a-entity>
+      <!-- 8############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-8"
+        visible="false"
+      >
+        <!--  -->
+      </a-entity>
+      <!-- 9############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-9"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="121.03088 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -77.5567130644985 -2.8304115079462666"
+          position="270.72865 -0.11446 303.43375"
+          color="#000"
+          the_pintings="Pinting_Name :NS-BA;
         Pinting_Picture: ./Style/Images/Tableaux/NS-BA.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -773,12 +1162,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : NDEYESOKHNA;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="308.44467 -3.53838 185.77725" color="#000"
-                the_pintings="Pinting_Name :NS-BA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="308.44467 -3.53838 185.77725"
+          color="#000"
+          the_pintings="Pinting_Name :NS-BA-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/NS-BA-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -788,12 +1184,19 @@
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : NDEYESOKHNA;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="103.21273 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.635039915111647 91.24582070576415 -2.7335816405691578"
-                position="-230.86072 14.76048 113.44074" color="#000" the_pintings="Pinting_Name :DOCTA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="103.21273 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.635039915111647 91.24582070576415 -2.7335816405691578"
+          position="-230.86072 14.76048 113.44074"
+          color="#000"
+          the_pintings="Pinting_Name :DOCTA-TEXTE;
             Pinting_Picture: ./Style/Images/Tableaux/DOCTA-TEXTE.jpg;
             Autor_Name :Ina Makosi;
             Size :.................
@@ -803,12 +1206,19 @@
                    ............................;
             Price : 6.799 000 francs (10460 €); Sound : DOCTA;
             PlaneRotation : -280
-            ">
-            </a-plane>
+            "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-304.45113 35.3286 326.85783" color="#000" the_pintings="Pinting_Name :DOCTA;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-304.45113 35.3286 326.85783"
+          color="#000"
+          the_pintings="Pinting_Name :DOCTA;
 Pinting_Picture: ./Style/Images/Tableaux/DOCTA.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -818,16 +1228,26 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : DOCTA;
 PlaneRotation : -280
-">
-            </a-plane>
-
-        </a-entity>
-        <!-- 10############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-10" visible="false">
-
-            <a-plane data-clickable scale="121.03088 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -77.5567130644985 -2.8304115079462666"
-                position="322.77118 -0.11446 3.56998" color="#000" the_pintings="Pinting_Name :NS-BA;
+"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 10############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-10"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="121.03088 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -77.5567130644985 -2.8304115079462666"
+          position="322.77118 -0.11446 3.56998"
+          color="#000"
+          the_pintings="Pinting_Name :NS-BA;
     Pinting_Picture: ./Style/Images/Tableaux/NS-BA.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -837,12 +1257,19 @@ PlaneRotation : -280
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : NDEYESOKHNA;
     PlaneRotation : 280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="118.47618 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="308.44467 -3.53838 -168.3234" color="#000"
-                the_pintings="Pinting_Name :NS-BA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="118.47618 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="308.44467 -3.53838 -168.3234"
+          color="#000"
+          the_pintings="Pinting_Name :NS-BA-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/NS-BA-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -852,12 +1279,19 @@ PlaneRotation : -280
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : NDEYESOKHNA;
     PlaneRotation : 280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="103.21273 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.635039915111647 91.24582070576415 -2.7335816405691578"
-                position="-230.86072 14.76048 -134.02163" color="#000" the_pintings="Pinting_Name :DOCTA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="103.21273 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.635039915111647 91.24582070576415 -2.7335816405691578"
+          position="-230.86072 14.76048 -134.02163"
+          color="#000"
+          the_pintings="Pinting_Name :DOCTA-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/DOCTA-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -867,12 +1301,19 @@ PlaneRotation : -280
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : DOCTA;
         PlaneRotation : -280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406" position="-304.45113 35.3286 2.11895"
-                color="#000" the_pintings="Pinting_Name :DOCTA;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-304.45113 35.3286 2.11895"
+          color="#000"
+          the_pintings="Pinting_Name :DOCTA;
 Pinting_Picture: ./Style/Images/Tableaux/DOCTA.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -882,14 +1323,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : DOCTA;
 PlaneRotation -280: 
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 284.61323" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-328.89081 33.21107 284.61323"
+          color="#000"
+          the_pintings="Pinting_Name :DOUTS-TEXTE;
 Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -899,12 +1345,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : VIDE;
 PlaneRotation : -280;
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
-                position="304.91645 -0.11446 250.46943" color="#000" the_pintings="Pinting_Name :SOPHIE-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
+          position="304.91645 -0.11446 250.46943"
+          color="#000"
+          the_pintings="Pinting_Name :SOPHIE-TEXTE;
 Pinting_Picture: ./Style/Images/Tableaux/SOPHIE-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -914,19 +1367,26 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : SOPHIE;
 PlaneRotation : 280;
-">
-            </a-plane>
-
-
-
-
-        </a-entity>
-        <!-- 11############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-11" visible="false">
-
-            <a-plane data-clickable scale="121.03088 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -77.5567130644985 -2.8304115079462666"
-                position="322.77118 -0.11446 -129.18469" color="#000" the_pintings="Pinting_Name :NS-BA;
+"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 11############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-11"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="121.03088 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -77.5567130644985 -2.8304115079462666"
+          position="322.77118 -0.11446 -129.18469"
+          color="#000"
+          the_pintings="Pinting_Name :NS-BA;
     Pinting_Picture: ./Style/Images/Tableaux/NS-BA.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -936,15 +1396,19 @@ PlaneRotation : 280;
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : NDEYESOKHNA;
     PlaneRotation : 280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-
-
-
-            <a-plane data-clickable scale="118.47618 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.58042 -64.54770632605316 -2.84396" position="308.44467 -3.53838 -303.91232" color="#000"
-                the_pintings="Pinting_Name :NS-BA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="118.47618 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.58042 -64.54770632605316 -2.84396"
+          position="308.44467 -3.53838 -303.91232"
+          color="#000"
+          the_pintings="Pinting_Name :NS-BA-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/NS-BA-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -954,13 +1418,19 @@ PlaneRotation : 280;
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : NDEYESOKHNA;
     PlaneRotation : 280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-
-            <a-plane data-clickable scale="103.21273 140 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.635039915111647 91.24582070576415 -2.7335816405691578"
-                position="-230.86072 14.76048 -242.83039" color="#000" the_pintings="Pinting_Name :DOCTA-TEXTE;
+        <a-plane
+          data-clickable
+          scale="103.21273 140 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.635039915111647 91.24582070576415 -2.7335816405691578"
+          position="-230.86072 14.76048 -242.83039"
+          color="#000"
+          the_pintings="Pinting_Name :DOCTA-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/DOCTA-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -970,13 +1440,19 @@ PlaneRotation : 280;
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : DOCTA;
         PlaneRotation : -280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-304.45113 35.3286 -163.59728" color="#000" the_pintings="Pinting_Name :DOCTA;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-304.45113 35.3286 -163.59728"
+          color="#000"
+          the_pintings="Pinting_Name :DOCTA;
 Pinting_Picture: ./Style/Images/Tableaux/DOCTA.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -986,13 +1462,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : DOCTA;
 PlaneRotation : -280
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 121.35007" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-328.89081 33.21107 121.35007"
+          color="#000"
+          the_pintings="Pinting_Name :DOUTS-TEXTE;
 Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1002,13 +1484,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : VIDE;
 PlaneRotation : -280
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-328.89081 33.21107 312.09882" color="#000" the_pintings="Pinting_Name :DOUTS;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-328.89081 33.21107 312.09882"
+          color="#000"
+          the_pintings="Pinting_Name :DOUTS;
             Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
             Autor_Name :Ina Makosi;
             Size :.................
@@ -1018,12 +1506,19 @@ PlaneRotation : -280
                    ............................;
             Price : 6.799 000 francs (10460 €); Sound : VIDE;
             PlaneRotation : -280
-            ">
-            </a-plane>
+            "
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
-                position="420.67989 -0.11446 144.74147" color="#000" the_pintings="Pinting_Name :SOPHIE-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
+          position="420.67989 -0.11446 144.74147"
+          color="#000"
+          the_pintings="Pinting_Name :SOPHIE-TEXTE;
         Pinting_Picture: ./Style/Images/Tableaux/SOPHIE-TEXTE.jpg;
         Autor_Name :Ina Makosi;
         Size :.................
@@ -1033,13 +1528,19 @@ PlaneRotation : -280
                    ............................;
         Price : 6.799 000 francs (10460 €); Sound : SOPHIE;
         PlaneRotation : 280
-        ">
-            </a-plane>
+        "
+        >
+        </a-plane>
 
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
-                position="334.39418 19.85592 280.51344" color="#000" the_pintings="Pinting_Name :SOPHIE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
+          position="334.39418 19.85592 280.51344"
+          color="#000"
+          the_pintings="Pinting_Name :SOPHIE;
 Pinting_Picture: ./Style/Images/Tableaux/SOPHIE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1049,11 +1550,18 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : SOPHIE;
 PlaneRotation : 280
-">
-            </a-plane>
-            <a-plane data-clickable scale="146.82781 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 178.08101230461116 -2.8304115079462666"
-                position="106.57274 19.21317 456.35788" color="#000" the_pintings="Pinting_Name :SADIO;
+"
+        >
+        </a-plane>
+        <a-plane
+          data-clickable
+          scale="146.82781 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 178.08101230461116 -2.8304115079462666"
+          position="106.57274 19.21317 456.35788"
+          color="#000"
+          the_pintings="Pinting_Name :SADIO;
 Pinting_Picture: ./Style/Images/Tableaux/SADIO.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1063,11 +1571,18 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : SADIO;
 PlaneRotation : 280
-">
-            </a-plane>
-            <a-plane data-clickable scale="146.82781 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 178.08101230461116 -2.8304115079462666"
-                position="-73.91185 19.21317 456.35788" color="#000" the_pintings="Pinting_Name :SADIO-TEXTE;
+"
+        >
+        </a-plane>
+        <a-plane
+          data-clickable
+          scale="146.82781 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 178.08101230461116 -2.8304115079462666"
+          position="-73.91185 19.21317 456.35788"
+          color="#000"
+          the_pintings="Pinting_Name :SADIO-TEXTE;
 Pinting_Picture: ./Style/Images/Tableaux/SADIO-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1077,20 +1592,26 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : SADIO;
 PlaneRotation : 280
-">
-            </a-plane>
-
-
-
-
-        </a-entity>
-        <!-- 12############################################################ -->
-        <a-entity scale="0 0 0" class="big-pintings-containers" id="big-pintings-containers-12" visible="false">
-
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="3.968305689076082 -173.96029984203028 -4.847795904601895"
-                position="-130.7255 -19.02921 422.58929" color="#000" the_pintings="Pinting_Name :SADIO-TEXTE;
+"
+        >
+        </a-plane>
+      </a-entity>
+      <!-- 12############################################################ -->
+      <a-entity
+        scale="0 0 0"
+        class="big-pintings-containers"
+        id="big-pintings-containers-12"
+        visible="false"
+      >
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="3.968305689076082 -173.96029984203028 -4.847795904601895"
+          position="-130.7255 -19.02921 422.58929"
+          color="#000"
+          the_pintings="Pinting_Name :SADIO-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/SADIO-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -1100,13 +1621,19 @@ PlaneRotation : 280
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : SADIO;
     PlaneRotation : 180
-    ">
+    "
+        >
+        </a-plane>
 
-
-            </a-plane>
-
-            <a-plane data-clickable opacity="1" class="pintings clickable" position="2.78525 2.00768 -0.77302"
-                rotation="0 -71.44611817942825 0" scale="1.33336 1.5486 2.56287" color="#000" the_pintings="Pinting_Name :SOPHIE-TEXTE;
+        <a-plane
+          data-clickable
+          opacity="1"
+          class="pintings clickable"
+          position="2.78525 2.00768 -0.77302"
+          rotation="0 -71.44611817942825 0"
+          scale="1.33336 1.5486 2.56287"
+          color="#000"
+          the_pintings="Pinting_Name :SOPHIE-TEXTE;
     Pinting_Picture: ./Style/Images/Tableaux/SOPHIE-TEXTE.jpg;
     Autor_Name :Ina Makosi;
     Size :.................
@@ -1116,16 +1643,19 @@ PlaneRotation : 280
                    ............................;
     Price : 6.799 000 francs (10460 €); Sound : SOPHIE;
     PlaneRotation : 280
-    ">
-            </a-plane>
+    "
+        >
+        </a-plane>
 
-
-
-
-
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="3.968305689076082 -173.96029984203028 -4.847795904601895"
-                position="171.10305 6.66675 388.86186" color="#000" the_pintings="Pinting_Name :SADIO;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="3.968305689076082 -173.96029984203028 -4.847795904601895"
+          position="171.10305 6.66675 388.86186"
+          color="#000"
+          the_pintings="Pinting_Name :SADIO;
 Pinting_Picture: ./Style/Images/Tableaux/SADIO.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1135,12 +1665,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : SADIO;
 PlaneRotation : 180
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-310.36524 35.03155 -55.31251" color="#000" the_pintings="Pinting_Name :DOUTS-TEXTE;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-310.36524 35.03155 -55.31251"
+          color="#000"
+          the_pintings="Pinting_Name :DOUTS-TEXTE;
 Pinting_Picture: ./Style/Images/Tableaux/DOUTS-TEXTE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1150,12 +1687,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : VIDE;
 PlaneRotation : -280
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="175 196.54644 0.00001" opacity="1" class="pintings clickable"
-                rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
-                position="-347.82934 33.21107 124.39075" color="#000" the_pintings="Pinting_Name :DOUTS;
+        <a-plane
+          data-clickable
+          scale="175 196.54644 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="-5.580608924574218 83.88617782730869 -2.844162495029406"
+          position="-347.82934 33.21107 124.39075"
+          color="#000"
+          the_pintings="Pinting_Name :DOUTS;
 Pinting_Picture: ./Style/Images/Tableaux/DOUTS.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1165,12 +1709,19 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : VIDE;
 PlaneRotation : -280
-">
-            </a-plane>
+"
+        >
+        </a-plane>
 
-            <a-plane data-clickable scale="116.16633 138.60168 0.00001" opacity="1" class="pintings clickable"
-                rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
-                position="269.96198 25.33016 79.62513" color="#000" the_pintings="Pinting_Name :SOPHIE;
+        <a-plane
+          data-clickable
+          scale="116.16633 138.60168 0.00001"
+          opacity="1"
+          class="pintings clickable"
+          rotation="0.14782311114375238 -90.09245666416578 -2.8304115079462666"
+          position="269.96198 25.33016 79.62513"
+          color="#000"
+          the_pintings="Pinting_Name :SOPHIE;
 Pinting_Picture: ./Style/Images/Tableaux/SOPHIE.jpg;
 Autor_Name :Ina Makosi;
 Size :.................
@@ -1180,338 +1731,409 @@ Size :.................
                    ............................;
 Price : 6.799 000 francs (10460 €); Sound : SOPHIE;
 PlaneRotation : 280
-">
-            </a-plane>
-
-        </a-entity>
-
+"
+        >
+        </a-plane>
+      </a-entity>
     </a-scene>
 
     <script>
+      let groups = document.querySelectorAll(".groups");
+      let the_Plane_Rotater = document.querySelector("#the-plane-rotater");
+      let the_sky = document.querySelector("#image180");
+      let big_pintings_containers = document.querySelectorAll(
+        ".big-pintings-containers"
+      );
+      let pintings_info = document.querySelectorAll(".pintings_info");
+      let the_cursor = document.querySelector(".a-mouse-cursor-hover");
+      let ThePlane = document.querySelector("#the-plane");
+      let TheAudioContainer = document.querySelector("#audio-container");
+      //  console.log(TheAudioContainer);
 
-        let groups = document.querySelectorAll('.groups')
-        let the_Plane_Rotater = document.querySelector('#the-plane-rotater')
-        let the_sky = document.querySelector('#image180')
-        let big_pintings_containers = document.querySelectorAll('.big-pintings-containers')
-        let pintings_info = document.querySelectorAll('.pintings_info')
-        let the_cursor = document.querySelector('.a-mouse-cursor-hover')
-        let ThePlane = document.querySelector('#the-plane')
-        let TheAudioContainer = document.querySelector('#audio-container')
-    //  console.log(TheAudioContainer);
+      //! #######################################################
+      const setStrat = (theStrat) => {
+        the_sky.setAttribute("src", `#Scene-${theStrat}`);
+        let the_group_to_activate = document.querySelector(
+          `#Group-${theStrat}`
+        );
+        groups.forEach((group) => {
+          group.setAttribute("visible", "false");
+          group.setAttribute("scale", "0 0 0");
+        });
+        the_group_to_activate.setAttribute("visible", "true");
+        the_group_to_activate.setAttribute("scale", "1 1 1");
+      };
+      setStrat(1);
+      //! #######################################################
 
-        //! #######################################################
-        const setStrat = (theStrat) => {
-            the_sky.setAttribute('src', `#Scene-${theStrat}`)
-            let the_group_to_activate = document.querySelector(`#Group-${theStrat}`)
-            groups.forEach(group => {
-                group.setAttribute('visible', 'false')
-                group.setAttribute('scale', '0 0 0')
+      let inVR = false;
+
+      AFRAME.registerComponent("the_scene", {
+        tick: function () {
+          var sceneEl = this.el;
+          inVR = sceneEl.is("vr-mode");
+          if (inVR == false) {
+            ThePlane.setAttribute("scale", "0 0 0");
+          }
+          return inVR;
+        },
+      });
+
+      AFRAME.registerComponent("the_dote", {
+        schema: {
+          Name_of_dote: { type: "string", default: "#Name" },
+          Group_to_activate: { type: "string", default: "#Position" },
+        },
+
+        init: function () {
+          var stringToLog = this.data;
+          let Dote_Name = this.data.Name_of_dote;
+          let Group_to_activate = this.data.Group_to_activate;
+          let The_Arrow = this.el;
+
+          this.el.setAttribute("color", "#fff");
+          this.el.setAttribute("opacity", "0.6");
+          this.el.setAttribute("event-set__mouseenter", "scale: 11 11 11");
+          this.el.setAttribute("event-set__mouseleave", "scale: 10 10 10");
+          this.el.style.cursor = "pointer";
+
+          this.el.addEventListener("click", (theDote) => {
+            big_pintings_containers.forEach((element) => {
+              element.setAttribute("visible", "false");
+              element.setAttribute("scale", "0 0 0");
             });
-            the_group_to_activate.setAttribute('visible', 'true')
-            the_group_to_activate.setAttribute('scale', '1 1 1')
-        }
-        setStrat(1)
-        //! #######################################################
-
-        let inVR = false;
-
-        AFRAME.registerComponent('the_scene', {
-            tick: function () {
-                var sceneEl = this.el;
-                inVR = sceneEl.is('vr-mode');
-                if (inVR == false) {
-                    ThePlane.setAttribute("scale", "0 0 0");
-                }
-                return inVR
-            },
-        });
-
-        AFRAME.registerComponent('the_dote', {
-            schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', } },
-
-            init: function () {
-                var stringToLog = this.data;
-                let Dote_Name = this.data.Name_of_dote
-                let Group_to_activate = this.data.Group_to_activate
-                let The_Arrow = this.el
-
-                this.el.setAttribute('color', '#fff')
-                this.el.setAttribute('opacity', '0.6')
-                this.el.setAttribute('event-set__mouseenter', "scale: 11 11 11")
-                this.el.setAttribute('event-set__mouseleave', "scale: 10 10 10")
-                this.el.style.cursor = 'pointer'
-
-                this.el.addEventListener('click', (theDote) => {
-                    big_pintings_containers.forEach(element => {
-                        element.setAttribute('visible', 'false')
-                        element.setAttribute('scale', '0 0 0')
-                    });
-                    switch (Dote_Name) {
-                        case 'Dote-1':
-                            big_pintings_containers[0].setAttribute('visible', 'true')
-                            big_pintings_containers[0].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-1')
-                            break;
-                        case 'Dote-2':
-                            big_pintings_containers[1].setAttribute('visible', 'true')
-                            big_pintings_containers[1].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-2')
-                            break;
-                        case 'Dote-3':
-                            big_pintings_containers[2].setAttribute('visible', 'true')
-                            big_pintings_containers[2].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-3')
-                            break;
-                        case 'Dote-4':
-                            big_pintings_containers[3].setAttribute('visible', 'true')
-                            big_pintings_containers[3].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-4')
-                            break;
-                        case 'Dote-5':
-                            big_pintings_containers[4].setAttribute('visible', 'true')
-                            big_pintings_containers[4].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-5')
-                            break;
-                        case 'Dote-6':
-                            big_pintings_containers[5].setAttribute('visible', 'true')
-                            big_pintings_containers[5].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-6')
-                            break;
-                        case 'Dote-7':
-                            big_pintings_containers[6].setAttribute('visible', 'true')
-                            big_pintings_containers[6].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-7')
-                            break;
-                        case 'Dote-8':
-                            big_pintings_containers[7].setAttribute('visible', 'true')
-                            big_pintings_containers[7].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-8')
-                            break;
-                        case 'Dote-9':
-                            big_pintings_containers[8].setAttribute('visible', 'true')
-                            big_pintings_containers[8].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-9')
-                            break;
-                        case 'Dote-10':
-                            big_pintings_containers[9].setAttribute('visible', 'true')
-                            big_pintings_containers[9].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-10')
-                            break;
-                        case 'Dote-11':
-                            big_pintings_containers[10].setAttribute('visible', 'true')
-                            big_pintings_containers[10].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-11')
-                            break;
-                        case 'Dote-12':
-                            big_pintings_containers[11].setAttribute('visible', 'true')
-                            big_pintings_containers[11].setAttribute('scale', '1 1 1')
-                            the_sky.setAttribute('src', '#Scene-12')
-                            break;
-                        default:
-                            break;
-                    }
-                    let the_group_to_activate = document.querySelector(`#${Group_to_activate}`)
-
-                    groups.forEach(group => {
-                        group.setAttribute('visible', 'false')
-                        group.setAttribute('scale', '0 0 0')
-                    });
-                    the_group_to_activate.setAttribute('visible', 'true')
-                    the_group_to_activate.setAttribute('scale', '1 1 1')
-                });
+            switch (Dote_Name) {
+              case "Dote-1":
+                big_pintings_containers[0].setAttribute("visible", "true");
+                big_pintings_containers[0].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-1");
+                break;
+              case "Dote-2":
+                big_pintings_containers[1].setAttribute("visible", "true");
+                big_pintings_containers[1].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-2");
+                break;
+              case "Dote-3":
+                big_pintings_containers[2].setAttribute("visible", "true");
+                big_pintings_containers[2].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-3");
+                break;
+              case "Dote-4":
+                big_pintings_containers[3].setAttribute("visible", "true");
+                big_pintings_containers[3].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-4");
+                break;
+              case "Dote-5":
+                big_pintings_containers[4].setAttribute("visible", "true");
+                big_pintings_containers[4].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-5");
+                break;
+              case "Dote-6":
+                big_pintings_containers[5].setAttribute("visible", "true");
+                big_pintings_containers[5].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-6");
+                break;
+              case "Dote-7":
+                big_pintings_containers[6].setAttribute("visible", "true");
+                big_pintings_containers[6].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-7");
+                break;
+              case "Dote-8":
+                big_pintings_containers[7].setAttribute("visible", "true");
+                big_pintings_containers[7].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-8");
+                break;
+              case "Dote-9":
+                big_pintings_containers[8].setAttribute("visible", "true");
+                big_pintings_containers[8].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-9");
+                break;
+              case "Dote-10":
+                big_pintings_containers[9].setAttribute("visible", "true");
+                big_pintings_containers[9].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-10");
+                break;
+              case "Dote-11":
+                big_pintings_containers[10].setAttribute("visible", "true");
+                big_pintings_containers[10].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-11");
+                break;
+              case "Dote-12":
+                big_pintings_containers[11].setAttribute("visible", "true");
+                big_pintings_containers[11].setAttribute("scale", "1 1 1");
+                the_sky.setAttribute("src", "#Scene-12");
+                break;
+              default:
+                break;
             }
-        });
-        //###############################################################
-        let the_crad_container = document.querySelector('#the_crad_container')
-        let the_close_crad = document.querySelector('#close_crad')
-        let the_art_title = document.querySelector('#art_title')
-        let the_art_author = document.querySelector('#art_author')
-        let the_art_price = document.querySelector('#the_art_price')
-        let the_art_size = document.querySelector('#the_art_size')
-        let the_art_picture = document.querySelector('#the_art_picture').childNodes[1]
+            let the_group_to_activate = document.querySelector(
+              `#${Group_to_activate}`
+            );
 
-        the_close_crad.addEventListener('click', function () {
-            the_crad_container.style.display = 'none'
-            TheAudioContainer.currentTime = 0
-            TheAudioContainer.replaceChildren("")
-            TheAudioContainer.load()
+            groups.forEach((group) => {
+              group.setAttribute("visible", "false");
+              group.setAttribute("scale", "0 0 0");
+            });
+            the_group_to_activate.setAttribute("visible", "true");
+            the_group_to_activate.setAttribute("scale", "1 1 1");
+          });
+        },
+      });
+      //###############################################################
+      let the_crad_container = document.querySelector("#the_crad_container");
+      let the_close_crad = document.querySelector("#close_crad");
+      let the_art_title = document.querySelector("#art_title");
+      let the_art_author = document.querySelector("#art_author");
+      let the_art_price = document.querySelector("#the_art_price");
+      let the_art_size = document.querySelector("#the_art_size");
+      let the_art_picture =
+        document.querySelector("#the_art_picture").childNodes[1];
 
-        });
+      the_close_crad.addEventListener("click", function () {
+        the_crad_container.style.display = "none";
+        TheAudioContainer.currentTime = 0;
+        TheAudioContainer.replaceChildren("");
+        TheAudioContainer.load();
+      });
 
-        AFRAME.registerComponent('the_pintings', {
-            schema: {
-                Pinting_Name: { type: "string", default: "" },
-                Pinting_Picture: { type: "string", default: "" },
-                Autor_Name: { type: "string", default: "" },
-                Size: { type: "string", default: "1" },
-                Price: { type: "string", default: "" },
-                PlaneRotation: { type: "number", default: "" }
-            },
-            init: function () {
-                this.el.setAttribute('color', '#fff')
-                this.el.setAttribute("opacity", "1");
-                this.el.setAttribute("material", "src: #Dote-1; transparent: true");
-                this.el.style.cursor = 'pointer'
-                //*#######################################
-                var The_Name = this.data.Pinting_Name;
-                var The_Author = this.data.Autor_Name;
-                var The_Price = this.data.Price;
-                var The_Size = this.data.Size;
-                var The_Sound = this.data.Sound;
-                var The_Picture = this.data.Pinting_Picture;
-                var The_ZRotation = this.data.PlaneRotation;
-                let TheElement = this.el;
-                the_art_picture.setAttribute("width", `90%`)
-                this.el.addEventListener('click', function () {
-                    the_art_title.innerHTML = The_Name
-                    the_art_author.innerHTML = `${The_Author}`
-                    the_art_price.innerHTML = The_Price
-                    the_art_size.innerHTML = `${The_Size}`
-                    
+      AFRAME.registerComponent("the_pintings", {
+        schema: {
+          Pinting_Name: { type: "string", default: "" },
+          Pinting_Picture: { type: "string", default: "" },
+          Autor_Name: { type: "string", default: "" },
+          Size: { type: "string", default: "1" },
+          Price: { type: "string", default: "" },
+          PlaneRotation: { type: "number", default: "" },
+        },
+        init: function () {
+          this.el.setAttribute("color", "#fff");
+          this.el.setAttribute("opacity", "1");
+          this.el.setAttribute("material", "src: #Dote-1; transparent: true");
+          this.el.style.cursor = "pointer";
+          //*#######################################
+          var The_Name = this.data.Pinting_Name;
+          var The_Author = this.data.Autor_Name;
+          var The_Price = this.data.Price;
+          var The_Size = this.data.Size;
+          var The_Sound = this.data.Sound;
+          var The_Picture = this.data.Pinting_Picture;
+          var The_ZRotation = this.data.PlaneRotation;
+          let TheElement = this.el;
+          the_art_picture.setAttribute("width", `90%`);
+          this.el.addEventListener("click", function () {
+            the_art_title.innerHTML = The_Name;
+            the_art_author.innerHTML = `${The_Author}`;
+            the_art_price.innerHTML = The_Price;
+            the_art_size.innerHTML = `${The_Size}`;
 
-                    let newAudio = document.createElement("source")
-                    newAudio.id = "audio-source"
-                    newAudio.setAttribute("src", `./Sons/${The_Sound}.mp3`)
-                    TheAudioContainer.replaceChildren(newAudio)
-                    console.log(TheAudioContainer);
-                    TheAudioContainer.play()
-                    //########################################################################
-                    if (inVR == false) {
-                        the_art_picture.setAttribute("src", `${The_Picture}`)
-                        the_crad_container.style.display = 'flex'
+            let newAudio = document.createElement("source");
+            newAudio.id = "audio-source";
+            newAudio.setAttribute("src", `./Sons/${The_Sound}.mp3`);
+            TheAudioContainer.replaceChildren(newAudio);
+            console.log(TheAudioContainer);
+            TheAudioContainer.play();
+            //########################################################################
+            if (inVR == false) {
+              the_art_picture.setAttribute("src", `${The_Picture}`);
+              the_crad_container.style.display = "flex";
 
-                        if (The_Name == 'Tangouna Mbaar') {
-                            the_art_picture.setAttribute("width", `70%`)
-                        } else {
-                            the_art_picture.setAttribute("width", `90%`)
-                        }
-                    } else {
-                        //########################################################################
-                        ThePlane.setAttribute("scale", "1.4 1.4 1.4");
-                        the_Plane_Rotater.setAttribute("rotation", `0 ${The_ZRotation} 0`)
+              if (The_Name == "Tangouna Mbaar") {
+                the_art_picture.setAttribute("width", `70%`);
+              } else {
+                the_art_picture.setAttribute("width", `90%`);
+              }
+            } else {
+              //########################################################################
+              ThePlane.setAttribute("scale", "1.4 1.4 1.4");
+              the_Plane_Rotater.setAttribute(
+                "rotation",
+                `0 ${The_ZRotation} 0`
+              );
 
-                        switch (The_Name) {
-                            case 'TAAHA-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-1; transparent: true");
-                                break;
-                            case 'TAAHA':
-                                ThePlane.setAttribute("material", "src: #Tableaux-2; transparent: true");
-                                break;
-                            case 'HASSANE-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-3; transparent: true");
-                                break;
-                            case 'HASSANE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-4; transparent: true");
-                                break;
-                            case 'OUMAYMA-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-6; transparent: true");
-                                break;
-                            case 'OUMAYMA':
-                                ThePlane.setAttribute("material", "src: #Tableaux-5; transparent: true");
-                                break;
-                            case 'ABDASSAMAD-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-7; transparent: true");
-                                break;
-                            case 'ABDASSAMAD':
-                                ThePlane.setAttribute("material", "src: #Tableaux-8; transparent: true");
-                                break;
-                            case 'ABDALAH':
-                                ThePlane.setAttribute("material", "src: #Tableaux-9; transparent: true");
-                                break;
-                            case 'ABDALAH-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-10; transparent: true");
-                                break;
-                            case 'NS-BA':
-                                ThePlane.setAttribute("material", "src: #Tableaux-11; transparent: true");
-                                break;
-                            case 'NS-BA-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-12; transparent: true");
-                                break;
-                            case 'DOCTA':
-                                ThePlane.setAttribute("material", "src: #Tableaux-13; transparent: true");
-                                break;
-                            case 'DOCTA-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-14; transparent: true");
-                                break;
-                            case 'DOUTS':
-                                ThePlane.setAttribute("material", "src: #Tableaux-15; transparent: true");
-                                break;
-                            case 'DOUTS-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-16; transparent: true");
-                                break;
-                            case 'SOPHIE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-17; transparent: true");
-                                break;
-                            case 'SOPHIE-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-18; transparent: true");
-                                break;
-                            case 'SADIO':
-                                ThePlane.setAttribute("material", "src: #Tableaux-19; transparent: true");
-                                break;
-                            case 'SADIO-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-20; transparent: true");
-                                break;
-                            case 'KHADIJA':
-                                ThePlane.setAttribute("material", "src: #Tableaux-21; transparent: true");
-                                break;
-                            case 'KHADIJA-TEXTE':
-                                ThePlane.setAttribute("material", "src: #Tableaux-22; transparent: true");
-                                break;
-                            default:
-                                break;
-                        }
-                        //########################################################################
-                    }
-                });
-                //#######################################################
-
-                this.el.setAttribute('event-set__mouseenter', "opacity: 1")
-                this.el.setAttribute('event-set__mouseleave', "opacity: 0")
-
-                this.el.addEventListener('mouseover', function () {
-                    console.log('mouseover');
-
-                })
-                this.el.addEventListener('mouseout', function () {
-                    console.log('mouseout');
-                })
-
-                //#######################################################
+              switch (The_Name) {
+                case "TAAHA-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-1; transparent: true"
+                  );
+                  break;
+                case "TAAHA":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-2; transparent: true"
+                  );
+                  break;
+                case "HASSANE-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-3; transparent: true"
+                  );
+                  break;
+                case "HASSANE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-4; transparent: true"
+                  );
+                  break;
+                case "OUMAYMA-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-6; transparent: true"
+                  );
+                  break;
+                case "OUMAYMA":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-5; transparent: true"
+                  );
+                  break;
+                case "ABDASSAMAD-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-7; transparent: true"
+                  );
+                  break;
+                case "ABDASSAMAD":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-8; transparent: true"
+                  );
+                  break;
+                case "ABDALAH":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-9; transparent: true"
+                  );
+                  break;
+                case "ABDALAH-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-10; transparent: true"
+                  );
+                  break;
+                case "NS-BA":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-11; transparent: true"
+                  );
+                  break;
+                case "NS-BA-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-12; transparent: true"
+                  );
+                  break;
+                case "DOCTA":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-13; transparent: true"
+                  );
+                  break;
+                case "DOCTA-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-14; transparent: true"
+                  );
+                  break;
+                case "DOUTS":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-15; transparent: true"
+                  );
+                  break;
+                case "DOUTS-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-16; transparent: true"
+                  );
+                  break;
+                case "SOPHIE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-17; transparent: true"
+                  );
+                  break;
+                case "SOPHIE-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-18; transparent: true"
+                  );
+                  break;
+                case "SADIO":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-19; transparent: true"
+                  );
+                  break;
+                case "SADIO-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-20; transparent: true"
+                  );
+                  break;
+                case "KHADIJA":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-21; transparent: true"
+                  );
+                  break;
+                case "KHADIJA-TEXTE":
+                  ThePlane.setAttribute(
+                    "material",
+                    "src: #Tableaux-22; transparent: true"
+                  );
+                  break;
+                default:
+                  break;
+              }
+              //########################################################################
             }
-        });
-        //#######################################################
-        AFRAME.registerComponent('the_pintings_infos', {
-            schema: {
-                Pinting_Name: { type: "string", default: "" },
-            },
-            init: function () {
-                this.el.setAttribute("opacity", "0");
-            }
-        });
-        //!######################################################
-        AFRAME.registerComponent('the_sky', {
-            init: function () {
-                this.el.addEventListener('click', function () {
-                    ThePlane.setAttribute("scale", "0 0 0");
-                })
-            }
-        });
-        //!######################################################
-        AFRAME.registerComponent('close_the_plane', {
-            init: function () {
-                this.el.setAttribute('event-set__mouseenter', "scale", ".1 .1 .1")
-                this.el.setAttribute('event-set__mouseleave', "scale", ".08 .08 .08")
-                this.el.addEventListener('click', function () {
-                    ThePlane.setAttribute("scale", "0 0 0");
-                    TheAudioContainer.currentTime = 0
-            TheAudioContainer.replaceChildren("")
-            TheAudioContainer.load()
-                })
-            }
-        });
+          });
+          //#######################################################
+
+          this.el.setAttribute("event-set__mouseenter", "opacity: 1");
+          this.el.setAttribute("event-set__mouseleave", "opacity: 0");
+
+          this.el.addEventListener("mouseover", function () {
+            console.log("mouseover");
+          });
+          this.el.addEventListener("mouseout", function () {
+            console.log("mouseout");
+          });
+
+          //#######################################################
+        },
+      });
+      //#######################################################
+      AFRAME.registerComponent("the_pintings_infos", {
+        schema: {
+          Pinting_Name: { type: "string", default: "" },
+        },
+        init: function () {
+          this.el.setAttribute("opacity", "0");
+        },
+      });
+      //!######################################################
+      AFRAME.registerComponent("the_sky", {
+        init: function () {
+          this.el.addEventListener("click", function () {
+            ThePlane.setAttribute("scale", "0 0 0");
+          });
+        },
+      });
+      //!######################################################
+      AFRAME.registerComponent("close_the_plane", {
+        init: function () {
+          this.el.setAttribute("event-set__mouseenter", "scale", ".1 .1 .1");
+          this.el.setAttribute("event-set__mouseleave", "scale", ".08 .08 .08");
+          this.el.addEventListener("click", function () {
+            ThePlane.setAttribute("scale", "0 0 0");
+            TheAudioContainer.currentTime = 0;
+            TheAudioContainer.replaceChildren("");
+            TheAudioContainer.load();
+          });
+        },
+      });
     </script>
-
-
-</body>
-
+  </body>
 </html>
