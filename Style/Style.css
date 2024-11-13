@@ -280,11 +280,11 @@ html {
   grid-column: 3/5;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
-  grid-row: 4;
+  grid-row: 5;
 }
 #the_crad_container #the_crad #le_créer_par {
   grid-column: 3/5;
-  grid-row: 3;
+  grid-row: 4;
 }
 
 #the_crad_container #the_crad #the_art_picture img {
@@ -292,7 +292,7 @@ html {
 }
 
 #dimension_title {
-  grid-row: 6;
+  grid-row: 7;
   grid-column: 3/5;
 }
 
@@ -300,7 +300,7 @@ html {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-column: 3/5;
-  grid-row: 7;
+  grid-row: 8;
   margin: auto 0.5 auto auto;
 }
 
